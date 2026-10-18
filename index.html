@@ -7,100 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#ece9e1; --o:#e43c13; --ot:#14100c; --card:#faf8f3; --tint:#e3ddd0;
-  --display:"Anton","Impact","Arial Narrow",sans-serif;
-  --heavy:"Archivo Black","Arial Black",system-ui,sans-serif;
-  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{margin:0;background:var(--bg);color:var(--ot);font-family:var(--sans);font-weight:500;line-height:1.35;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-::selection{background:var(--ot);color:var(--bg)}
-:focus-visible{outline:3px solid var(--ot);outline-offset:4px}
-
-.skip{position:absolute;left:12px;top:-80px;background:var(--ot);color:var(--bg);padding:10px 16px;border-radius:8px;z-index:60;font-weight:700}
-.skip:focus{top:calc(10px + env(safe-area-inset-top,0px))}
-.pause{position:absolute;right:0;bottom:0;background:none;border:1.5px solid var(--ot);color:var(--ot);font:inherit;font-weight:700;font-size:13px;border-radius:99px;padding:6px 14px;cursor:pointer}
-.pause:hover{background:var(--ot);color:var(--bg)}
-.pad{padding-left:clamp(20px,3.5vw,48px);padding-right:clamp(20px,3.5vw,48px)}
-
-
-
-
-/* hero */
-.hero{padding-top:150px;overflow:hidden}
-.cols{display:grid;grid-template-columns:6fr 4fr;gap:clamp(24px,4vw,56px);font-size:16px;max-width:1500px}
-.cols p{margin:0;max-width:34ch}
-.cols p.lead{font-size:clamp(24px,2.9vw,42px);font-weight:700;line-height:1.05;letter-spacing:-.02em;color:var(--o);max-width:none}
-.cols a{text-decoration:underline;text-underline-offset:3px}
-@media(max-width:800px){.cols{grid-template-columns:1fr;gap:18px}}
-.stage{position:relative;margin-top:clamp(40px,8vw,110px);padding-bottom:clamp(50px,8vw,120px)}
-.giant{color:var(--o);position:relative;height:29vw;margin:0;font-family:var(--heavy);letter-spacing:-.05em;text-transform:uppercase;line-height:.86;white-space:nowrap}
-.ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;font-size:12vw}
-.ln{display:block;overflow:hidden;padding:.04em .02em}
-.ln>span{display:block;transform:translateY(110%)}
-.ph.on .ln>span{transform:none;transition:transform .85s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*.09s)}
-.ph.out .ln>span{transform:translateY(-110%);transition:transform .6s cubic-bezier(.7,0,.8,.3);transition-delay:calc(var(--i)*.05s)}
-
-
-.mock{position:absolute;left:55%;bottom:0;width:clamp(150px,22vw,300px);aspect-ratio:3/4;background:var(--card);border-radius:22px;padding:16px;
-  box-shadow:0 30px 60px -25px rgba(120,40,10,.45);transform:rotate(-5deg);animation:float 6s ease-in-out infinite}
-.mock i{display:block;border-radius:8px;background:var(--o)}
-.mock .a{height:12px;width:40%;margin-bottom:12px}
-.mock .b{height:46%;border-radius:14px;background:var(--tint);position:relative;overflow:hidden}
-.mock .b::after{content:"";position:absolute;width:56%;aspect-ratio:1;border-radius:50%;background:var(--o);right:-10%;bottom:-18%}
-.mock .c{height:12px;margin-top:14px;width:80%;opacity:.9}
-.mock .d{height:12px;margin-top:8px;width:55%;opacity:.5}
-.mock .e{height:32px;margin-top:16px;width:46%;border-radius:99px}
-@keyframes float{50%{transform:rotate(-2deg) translateY(-14px)}}
-
-/* generic */
-section{padding:clamp(70px,10vw,140px) 0 0}
-h2{color:var(--o);font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(64px,15vw,230px);line-height:.88;margin:0;letter-spacing:-.005em}
-.statement{color:var(--o);font-size:clamp(26px,3.4vw,46px);font-weight:700;line-height:1.08;letter-spacing:-.02em;max-width:22ch;margin:0 0 18px}
-.small{font-size:17px;max-width:46ch;margin:0}
-.stats{display:flex;gap:clamp(24px,6vw,90px);flex-wrap:wrap;margin-top:54px}
-.stats div{color:var(--o);font-family:var(--display);font-size:clamp(48px,7vw,96px);line-height:1}
-.stats b{font-weight:inherit;font-variant-numeric:tabular-nums}
-.stats span{color:var(--ot);display:block;font-family:var(--sans);font-size:14px;margin-top:6px;font-weight:500}
-
-/* list rows */
-.list{margin-top:60px;border-top:1.5px solid var(--o)}
-.row{display:grid;grid-template-columns:1.4fr 1fr 160px;gap:24px;align-items:baseline;padding:26px 0;border-bottom:1.5px solid var(--o);position:relative;transition:padding .3s,background .3s,color .3s}
-a.row:hover{background:var(--o);color:var(--ot);padding-left:20px;padding-right:20px}
-a.row:hover .t{color:var(--bg)}
-.row .t{color:var(--o);font-size:clamp(28px,3.8vw,54px);font-weight:700;letter-spacing:-.03em;line-height:1}
-.row sup{font-size:.4em;margin-left:6px;display:inline-block;transition:transform .3s}
-a.row:hover sup{transform:translate(4px,-4px)}
-.row .d{font-size:16px}
-.row .l{font-size:14px;text-align:right}
-@media(max-width:800px){.row{grid-template-columns:1fr;gap:8px}.row .l{text-align:left}}
-.more{display:inline-block;margin-top:34px;font-weight:700;font-size:18px;border-bottom:2px solid currentColor}
-
-.peek{position:fixed;left:0;top:0;width:260px;height:180px;border-radius:18px;pointer-events:none;z-index:40;opacity:0;transform:translate(-999px,-999px) scale(.85);transition:opacity .2s,scale .2s;background:var(--tint)}
-.peek.on{opacity:1}
-.p1{background:radial-gradient(circle at 70% 60%,var(--card) 0 26%,transparent 27%),var(--o)}
-.p2{background:repeating-linear-gradient(90deg,var(--o) 0 2px,transparent 2px 28px),repeating-linear-gradient(0deg,var(--o) 0 2px,transparent 2px 28px),var(--card)}
-.p3{background:linear-gradient(135deg,var(--o) 0 50%,var(--card) 50%)}
-.p4{background:radial-gradient(circle at 30% 50%,var(--o) 0 30%,transparent 31%),radial-gradient(circle at 70% 50%,var(--card) 0 30%,transparent 31%),var(--tint)}
-
-/* contact */
-.contact{margin-top:clamp(80px,10vw,140px);background:var(--o);color:var(--ot);padding:clamp(60px,8vw,110px) 0 70px;text-align:center}
-.contact h2{color:var(--bg);font-size:clamp(70px,19vw,300px)}
-.links{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:40px;font-weight:700;font-size:18px}
-.links a{border-bottom:2px solid currentColor}
-.links a:hover{border-bottom-width:5px}
-footer{background:var(--o);color:var(--ot);text-align:center;font-size:13px;padding:0 0 40px}
-
-.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
-.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.giant span,.mock{animation:none}}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
@@ -161,12 +68,13 @@ footer{background:var(--o);color:var(--ot);text-align:center;font-size:13px;padd
     <div class="row"><span class="t">Lead Creative</span><span class="d">Led design and front-end for storefront migrations. Built experiences for Apple, Airbnb and Deloitte.</span><span class="l">2019 — 2021</span></div>
     <div class="row"><span class="t">Art Director → Senior AD</span><span class="d">Designed and coded custom enterprise storefronts in HTML and CSS, and directed photography.</span><span class="l">2015 — 2019</span></div>
   </div>
+  <a class="more rv" href="FeliciaSchlinz_Resume.pdf" target="_blank" rel="noopener">View full resume (PDF) ↗</a>
 </section>
 
 <section class="pad" id="about">
   <h2 class="rv">About</h2>
-  <p class="statement rv" style="margin-top:50px;max-width:28ch">From hands-on design and front-end development to leading multidisciplinary teams, at enterprise scale.</p>
-  <p class="small rv">I connect creative thinking, technology and business strategy. Education: BA in Graphic Design &amp; Advertising, Morningside College, with Alpha Delta Sigma honors.</p>
+  <p class="statement rv" style="margin-top:50px;max-width:30ch">A multidisciplinary creative and digital experience leader with 11 years connecting creative thinking, technology and business strategy.</p>
+  <a class="more rv" href="about.html">More about me ↗</a>
 </section>
 
 <div class="contact" id="contact">
