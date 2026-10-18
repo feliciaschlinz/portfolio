@@ -51,12 +51,7 @@
 
 <section class="pad" id="work">
   <h2 class="rv">Selected<br>work</h2>
-  <div class="list rv" id="projects">
-    <a class="row" data-p="p1" href="project.html?p=nvidia-ecommerce"><span class="t">Nvidia eCommerce<sup>↗</sup></span><span class="d">Merchandise store. Wireframes in one week, 95% first-pass approval.</span><span class="l">UI/UX + Development</span></a>
-    <a class="row" data-p="p2" href="https://feliciaschlinz.com/staples-promo-digital-design-system" target="_blank" rel="noopener"><span class="t">Staples Promo Design System<sup>↗</sup></span><span class="d">The shared system behind reusable storefront themes powering 400+ sites.</span><span class="l">Design system</span></a>
-    <a class="row" data-p="p3" href="https://feliciaschlinz.com/airbnb-ecommerce-website" target="_blank" rel="noopener"><span class="t">Airbnb Goods<sup>↗</sup></span><span class="d">Design and development of the initial launch of Airbnb's merchandise site.</span><span class="l">eCommerce website</span></a>
-    <a class="row" data-p="p4" href="https://feliciaschlinz.com/fedex-ecommerce-website-design-development" target="_blank" rel="noopener"><span class="t">Global FedEx eCommerce<sup>↗</sup></span><span class="d">Website pitch for FedEx's global merchandise program.</span><span class="l">Pitch + Development</span></a>
-  </div>
+  <div class="feat" id="projects"></div>
   <a class="more rv" href="work.html">See all projects <span>↗</span></a>
 </section>
 
@@ -80,6 +75,7 @@
 </main>
 <div id="site-footer"></div>
 <script src="footer.js"></script>
+<script src="projects.js"></script>
 
 
 <script>
@@ -147,6 +143,31 @@
     }, 2600);
   }
 
+
+
+  // Selected work cards: edit the text/images in projects.js (the feature field)
+  (function () {
+    var box = document.getElementById('projects');
+    function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+    FEATURED.forEach(function (key, n) {
+      var p = PROJECTS.filter(function (x) { return x.slug === key || x.legacy === key; })[0];
+      if (!p || !p.feature) return;
+      var f = p.feature;
+      var a = document.createElement('a');
+      a.className = 'fc rv'; a.href = p.href; if (p.external) { a.target = '_blank'; a.rel = 'noopener'; }
+      var src = f.image || p.cover;
+      a.innerHTML = '<span class="ft t' + (n % 6) + '">' + (src ? '<img src="' + esc(src) + '" alt="" loading="lazy">' : '') + '</span>' +
+        '<span class="fs">' + esc(f.stat) + '</span><span class="fl">' + esc(f.label) + '</span>' +
+        '<span class="fh">' + esc(f.line) + '</span>' +
+        '<span class="fn">' + esc(p.title) + (p.external ? '<sup>↗</sup>' : ' →') + '</span>';
+      box.appendChild(a);
+    });
+    box.querySelectorAll('img').forEach(function (im) {
+      function bad() { im.remove(); }
+      im.addEventListener('error', bad);
+      if (im.complete && im.naturalWidth === 0) bad();
+    });
+  })();
 
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
