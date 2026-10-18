@@ -46,7 +46,8 @@ h1.wp{color:var(--o);font-family:var(--display);font-weight:400;text-transform:u
 <script>
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 
-  var cats = ['All'];
+  // filter buttons show in this order; any new category you add to a project is appended automatically
+  var cats = ['All', 'eCommerce', 'Strategy & Leadership', 'Marketing', 'Art Direction'];
   PROJECTS.forEach(function (p) { if (cats.indexOf(p.category) < 0) cats.push(p.category); });
 
   document.getElementById('grid').innerHTML = PROJECTS.map(function (p, i) {
