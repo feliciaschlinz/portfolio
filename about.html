@@ -10,6 +10,13 @@
 <link rel="stylesheet" href="styles.css">
 <style>
 h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(64px,15vw,230px);line-height:.88;margin:0;letter-spacing:-.005em}
+.chap{display:grid;grid-template-columns:1fr 1.7fr;gap:clamp(24px,6vw,100px);padding-top:clamp(70px,10vw,140px);border-top:1.5px solid var(--o);margin-top:clamp(70px,10vw,140px)}
+@media(max-width:800px){.chap{grid-template-columns:1fr;gap:22px}}
+.chap h2{font-size:clamp(40px,5.2vw,84px);line-height:.95;position:sticky;top:90px;align-self:start}
+@media(max-width:800px){.chap h2{position:static}}
+.chap p{font-size:clamp(18px,1.55vw,21px);max-width:60ch;margin:0 0 1.15em}
+.chap p.pull{font-size:clamp(26px,3vw,44px);font-weight:700;line-height:1.08;letter-spacing:-.02em;color:var(--o);max-width:24ch;margin:1.1em 0}
+.chap p:last-child{margin-bottom:0}
 </style>
 </head>
 <body>
@@ -20,8 +27,37 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
 <main id="top">
 <section class="pad" style="padding-top:150px">
   <h1 class="page rv">About</h1>
-  <p class="statement rv" style="margin-top:50px;max-width:30ch">A multidisciplinary creative and digital experience leader with 11 years connecting creative thinking, technology and business strategy.</p>
-  <!-- Add your About content here (photo, how you work, what you are like to work with). -->
+  <p class="statement rv" style="margin-top:50px;max-width:30ch">A multidisciplinary creative and digital experience leader with 11 years connecting creative thinking, technology, and business strategy.</p>
+
+  <div class="chap rv">
+    <h2>I build teams. But the culture is what makes them great.</h2>
+    <div>
+      <p>I started my career designing websites, writing code, and bringing creative ideas to life. Over the years, I built a digital creative team from the ground up and grew into leading a multidisciplinary UX organization.</p>
+      <p class="pull">But what I'm most proud of isn't a project, a launch, or a business result. It's the culture we've built together.</p>
+      <p>I start every 1:1 with "How's life?" instead of "How's work?" because I genuinely care about the people behind the job titles. We share pieces of our lives, celebrate each other, and show up when it matters. Those relationships build trust, trust creates space for ideas and collaboration, and that's how a group of talented individuals becomes a powerhouse of a team.</p>
+    </div>
+  </div>
+
+  <div class="chap rv">
+    <h2>Their wins belong on my fridge.</h2>
+    <div>
+      <p class="pull" style="margin-top:0">I'm ridiculously proud of my people.</p>
+      <p>I want them to grow, discover what they're capable of, and have opportunities they never thought possible. I'll champion their ideas, fight for their recognition, and be their loudest advocate when they're not in the room.</p>
+      <p>I lead with empathy, honesty, and high expectations. I'm not afraid of difficult conversations, challenging decisions, or standing up for what's right for my team. I believe people do their best work when they feel supported, trusted, and empowered to take ownership.</p>
+      <p>My team deserves a seat at the table, not just a list of things to execute. I want them contributing their expertise, challenging perspectives, and helping shape the direction of what we're building.</p>
+      <p class="pull">I measure my success by the people I've helped grow, the confidence they've gained, and the things they've accomplished.</p>
+      <p>I want to build a team that does exceptional work, but I also want people to look back on their time working together and remember how it felt to be part of it.</p>
+    </div>
+  </div>
+
+  <div class="chap rv">
+    <h2>Still a creative at heart.</h2>
+    <div>
+      <p>I've been the designer, the developer, the art director, and the person responsible for bringing it all together. That hands-on experience shapes how I approach strategy, solve problems, and lead.</p>
+      <p class="pull">I understand the work because I've done the work.</p>
+      <p>And I know how much better it becomes when talented people are trusted, supported, and given the space to do what they do best.</p>
+    </div>
+  </div>
 </section>
 
 <div class="contact" id="contact">
@@ -40,7 +76,7 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
 <script>
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.05 });
   document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
 </script>
 </body>
