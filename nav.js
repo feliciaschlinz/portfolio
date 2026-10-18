@@ -62,7 +62,10 @@
     'font-family:var(--display,Anton,Impact,"Arial Narrow",sans-serif);text-transform:uppercase;font-size:var(--mfs,clamp(44px,11vw,150px));line-height:.95;letter-spacing:-.005em;',
     'transform:translateY(105%);transition:transform .3s ease-in,color .2s}',
     '.site-menu li a small{font-family:var(--sans,system-ui,sans-serif);font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--ot,#14100c)}',
-    '.site-menu li a:hover,.site-menu li a:focus-visible{color:var(--ot,#14100c)}',
+    '@media(hover:hover){.site-menu li a:hover{color:var(--ot,#14100c)}}',
+    '.site-menu li a:focus-visible{color:var(--ot,#14100c)}',
+    '.site-header a,.site-toggle,.site-menu a{-webkit-tap-highlight-color:transparent}',
+    '.site-menu:focus{outline:none}',
     '.site-menu li a[aria-current="page"]::after{content:"";width:.13em;height:.13em;border-radius:50%;background:currentColor;align-self:center;margin-left:auto}',
     '.site-menu.open li a{transform:none;transition:transform .55s cubic-bezier(.2,.8,.2,1) calc(.3s + var(--i) * .07s),color .2s}',
     '.menu-foot{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:32px;font-size:16px;font-weight:700;opacity:0;transform:translateY(12px);transition:opacity .2s,transform .2s}',
@@ -100,7 +103,7 @@
         '<span class="lbl">Menu</span><span class="ico" aria-hidden="true"><i></i><i></i></span>' +
       '</button>' +
     '</header>' +
-    '<nav class="site-menu" id="site-menu" aria-label="Menu">' +
+    '<nav class="site-menu" id="site-menu" aria-label="Menu" tabindex="-1">' +
       '<ol>' + items + '</ol>' +
       '<div class="menu-foot">' +
         '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>' +
@@ -120,18 +123,18 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  function setOpen(open, returnFocus) {
+  function setOpen(open, returnFocus, viaKeyboard) {
     isOpen = open;
     menu.classList.toggle('open', open);
     hdr.classList.toggle('open', open);
     btn.setAttribute('aria-expanded', String(open));
     lbl.textContent = open ? 'Close' : 'Menu';
     document.documentElement.style.overflow = open ? 'hidden' : '';
-    if (open) menuLinks[0].focus({ preventScroll: true });
+    if (open) (viaKeyboard ? menuLinks[0] : menu).focus({ preventScroll: true });
     else if (returnFocus) btn.focus();
   }
 
-  btn.addEventListener('click', function () { setOpen(!isOpen, true); });
+  btn.addEventListener('click', function (e) { setOpen(!isOpen, true, e.detail === 0); }); // detail 0 = opened with the keyboard
   logo.addEventListener('click', function () { if (isOpen) setOpen(false, false); });
   // close first so the page can scroll to the #anchor it is about to jump to
   menuLinks.forEach(function (a) { a.addEventListener('click', function () { setOpen(false, false); }); });
