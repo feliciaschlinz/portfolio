@@ -17,6 +17,16 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
 .chap p{font-size:clamp(18px,1.55vw,21px);max-width:60ch;margin:0 0 1.15em}
 .chap p.pull{font-size:clamp(26px,3vw,44px);font-weight:700;line-height:1.08;letter-spacing:-.02em;color:var(--o);max-width:24ch;margin:1.1em 0}
 .chap p:last-child{margin-bottom:0}
+.top{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,5vw,80px);align-items:stretch}
+.top h1.page{font-size:clamp(56px,12vw,200px)}
+.top .statement{margin:clamp(28px,4vw,56px) 0 0;max-width:30ch}
+@media(max-width:800px){.top{grid-template-columns:1fr}}
+.photo{margin:0;position:relative;overflow:hidden;border-radius:20px;min-height:360px}
+@media(max-width:800px){.photo{min-height:0;aspect-ratio:4/5}}
+.photo:not(.ph){background:var(--card)}
+.photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.photo.ph{display:flex;align-items:center;justify-content:center;background:var(--card);border:2px dashed var(--o)}
+.photo .hint{position:relative;margin:16px;padding:6px 12px;border-radius:99px;background:var(--bg);color:var(--ot);font-size:13px;font-weight:700;text-align:center}
 </style>
 </head>
 <body>
@@ -26,8 +36,14 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
 
 <main id="top">
 <section class="pad" style="padding-top:150px">
-  <h1 class="page rv">About</h1>
-  <p class="statement rv" style="margin-top:50px;max-width:30ch">A multidisciplinary creative and digital experience leader with 11 years connecting creative thinking, technology, and business strategy.</p>
+  <div class="top rv">
+    <div>
+      <h1 class="page">About</h1>
+      <p class="statement">A multidisciplinary creative and digital experience leader with 11 years connecting creative thinking, technology, and business strategy.</p>
+    </div>
+    <!-- Your photo: save it as assets/felicia.jpg (portrait, about 4:5 works best), or change the src below. -->
+    <figure class="photo"><img src="assets/felicia.jpg" alt="Portrait of Felicia Schlinz" width="800" height="1000"></figure>
+  </div>
 
   <div class="chap rv">
     <h2>I build teams. But the culture is what makes them great.</h2>
@@ -69,6 +85,15 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
     es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
   }, { threshold: 0.05 });
   document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+  // until the photo file exists, show a labelled placeholder that says which file to add
+  var photo = document.querySelector('.photo'), pimg = photo.querySelector('img');
+  function noPhoto() {
+    photo.classList.add('ph');
+    photo.innerHTML = '<span class="hint">Add photo: ' + pimg.getAttribute('src') + '</span>';
+  }
+  pimg.addEventListener('error', noPhoto);
+  if (pimg.complete && pimg.naturalWidth === 0) noPhoto();
 </script>
 </body>
 </html>
