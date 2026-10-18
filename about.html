@@ -29,15 +29,6 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
 @media(hover:hover){.photo:hover img.nat{opacity:1}}
 .photo[data-look="natural"] img{filter:saturate(.9) contrast(1.04) sepia(.12)}
 .photo[data-look="natural"] img.nat{display:none}
-.pw{position:relative;display:flex}
-.pw .photo{flex:1;min-width:0}
-.co{position:absolute;z-index:2;text-align:center;padding:14px 22px 14px;border-radius:18px;min-width:150px;box-shadow:0 10px 30px rgba(20,16,12,.12)}
-.co b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(38px,4.4vw,60px);line-height:1;text-transform:uppercase;padding-bottom:10px;border-bottom:1.5px solid currentColor}
-.co span{display:block;margin-top:10px;font-size:14px;font-weight:700;line-height:1.25}
-.co1{top:-22px;left:-26px;background:var(--o);color:var(--ot)}
-.co2{top:42%;right:-26px;background:var(--card);color:var(--ot)}
-.co3{bottom:34px;left:-26px;background:var(--bg);color:var(--ot);border:1.5px solid var(--ot)}
-@media(max-width:800px){.co{padding:10px 16px;min-width:0;border-radius:14px}.co b{font-size:34px;padding-bottom:6px}.co span{font-size:12px;margin-top:6px}.co1{left:-8px;top:-14px}.co2{right:-8px}.co3{left:-8px;bottom:22px}}
 .photo.ph{display:flex;align-items:center;justify-content:center;background:var(--card);border:2px dashed var(--o)}
 .photo .hint{position:relative;margin:16px;padding:6px 12px;border-radius:99px;background:var(--bg);color:var(--ot);font-size:13px;font-weight:700;text-align:center}
 </style>
@@ -56,13 +47,7 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
       <p class="statement">A multidisciplinary creative and digital experience leader with 11 years connecting creative thinking, technology, and business strategy.</p>
     </div>
     <!-- Photo: assets/Felicia.jpg. Look: duotone (default, full color on hover). To show it in natural color instead, change data-look="duotone" to data-look="natural". -->
-    <div class="pw">
-          <figure class="photo" data-look="duotone"><img src="assets/Felicia.jpg" alt="Portrait of Felicia Schlinz" width="1242" height="1242"><img class="nat" src="assets/Felicia.jpg" alt="" aria-hidden="true"></figure>
-      <!-- Callouts: edit the number and the label. Add or remove a <div class="co …"> to change how many show. -->
-      <div class="co co1" aria-hidden="false"><b>11+</b><span>Years designing &amp; building</span></div>
-      <div class="co co2"><b>8</b><span>Person team led</span></div>
-      <div class="co co3"><b>400+</b><span>Storefronts shaped</span></div>
-    </div>
+    <figure class="photo" data-look="duotone"><img src="assets/Felicia.jpg" alt="Portrait of Felicia Schlinz" width="1242" height="1242"><img class="nat" src="assets/Felicia.jpg" alt="" aria-hidden="true"></figure>
   </div>
 
   <div class="chap rv">
