@@ -3,11 +3,16 @@
    TO ADD A PROJECT: copy the TEMPLATE block at the bottom, paste it into the PROJECTS list, fill it in.
    TO PUBLISH A CASE STUDY: fill in the fields and set published: true.
    While published is false, the project links to your old portfolio page (legacy) instead.
+   HOMEPAGE: the four cards under "Selected work" come from the feature field (image, stat, label, line).
+   Edit those words to change what grabs attention. To feature a different project, give it a
+   feature field and list its slug (or legacy name) in FEATURED just below.
    IMAGES: put files in images/<slug>/ and list the paths below. Missing images show a placeholder
    that tells you exactly which file to add.
    Every field except slug, title, category and summary is optional; empty sections are hidden. */
 
 var LEGACY_BASE = 'https://feliciaschlinz.com/';
+
+var FEATURED = ['nvidia-ecommerce', 'staples-promo-digital-design-system', 'airbnb-ecommerce-website', 'fedex-ecommerce-website-design-development'];
 
 var PROJECTS = [
   {
@@ -20,6 +25,7 @@ var PROJECTS = [
     timeline: '',
     tools: [],
     cover: 'images/nvidia-ecommerce/cover.jpg',
+    feature: { image: 'images/nvidia-ecommerce/feature.jpg', stat: '95%', label: 'first-pass approval', line: 'Full end-to-end wireframes for the world leader in AI computing, delivered in one week.' },
     hero: 'images/nvidia-ecommerce/hero.jpg',
     overview: [
       "As the world leader in AI computing, Nvidia required more than just a basic eCommerce experience for their global employee merchandise platform.",
@@ -58,9 +64,9 @@ var PROJECTS = [
     ]
   },
 
-  { legacy: 'fedex-ecommerce-website-design-development', title: 'Global FedEx eCommerce Website', client: 'FedEx', category: 'eCommerce', summary: "Design & development of website pitch for FedEx's global merchandise program." },
+  { legacy: 'fedex-ecommerce-website-design-development', feature: { image: 'images/fedex-global/feature.jpg', stat: 'Global', label: 'merchandise program', line: "The pitch that put FedEx’s worldwide merchandise program on one site." }, title: 'Global FedEx eCommerce Website', client: 'FedEx', category: 'eCommerce', summary: "Design & development of website pitch for FedEx's global merchandise program." },
   { legacy: 'staples-promo-product-page-redesign', title: 'Staples Promo Product Pages UI/UX', client: 'Staples Promo', category: 'eCommerce', summary: 'Redesign of the product page with improved UX and added personality.' },
-  { legacy: 'staples-promo-digital-design-system', title: 'Staples Promo Design System', client: 'Staples Promo', category: 'Design Systems', summary: "Design and development of Staples Promo's digital design system." },
+  { legacy: 'staples-promo-digital-design-system', feature: { image: 'images/staples-design-system/feature.jpg', stat: '400+', label: 'sites on one system', line: "One shared system now powers every reusable storefront theme." }, title: 'Staples Promo Design System', client: 'Staples Promo', category: 'Design Systems', summary: "Design and development of Staples Promo's digital design system." },
   { legacy: 'staples-promo-photoshoot', title: 'Staples Promo Photo Shoot', client: 'Staples Promo', category: 'Photography', summary: 'Photo direction for Staples Promo brand launch, digital marketing, and e-commerce website.' },
   { legacy: '2020-airbnb-ecommerce', title: '2020 Airbnb E-Commerce Website', client: 'Airbnb', category: 'eCommerce', summary: "Redesign and development of Airbnb's corporate merchandise website to reflect updated brand guidelines." },
   { legacy: 'airbnb-digital-display-travel', title: 'Airbnb Digital Display', client: 'Airbnb', category: 'Marketing', summary: 'Animated digital display to market general awareness of their e-commerce website.' },
@@ -73,7 +79,7 @@ var PROJECTS = [
   { legacy: 'copy-of-intuit-marketing', title: 'Global Identity Rebrand', client: '', category: 'Marketing', summary: 'Miscellaneous email communications and digital marketing.' },
   { legacy: 'airbnb-email-marketing', title: 'Airbnb Email Marketing', client: 'Airbnb', category: 'Marketing', summary: 'Email marketing offer that promoted a discount and theme focused on the Year of the Dog.' },
   { legacy: 'mycogen-seeds-photoshoot', title: 'Mycogen Seeds Photo Shoot', client: 'Mycogen Seeds', category: 'Photography', summary: "Photo direction for Mycogen Seeds' digital email marketing, e-commerce website, and print catalog." },
-  { legacy: 'airbnb-ecommerce-website', title: 'Airbnb eCommerce Website', client: 'Airbnb', category: 'eCommerce', summary: "Design and development of the initial launch of Airbnb's merchandise website, Airbnb Goods." },
+  { legacy: 'airbnb-ecommerce-website', feature: { image: 'images/airbnb-goods/feature.jpg', stat: '0 → 1', label: 'Airbnb Goods', line: "Designed and built the launch of Airbnb’s merchandise site from the ground up." }, title: 'Airbnb eCommerce Website', client: 'Airbnb', category: 'eCommerce', summary: "Design and development of the initial launch of Airbnb's merchandise website, Airbnb Goods." },
   { legacy: 'staples-ecommerce-theme', title: 'Staples eCommerce Theme', client: 'Staples', category: 'eCommerce', summary: "Design and development of Staples' e-commerce theme." },
   { legacy: 'hr-block-box', title: 'H&R Block Marketing Box', client: 'H&R Block', category: 'Marketing', summary: "Design and ideation of a subscription marketing campaign to support H&R Block's merchandise store, the Block Shop." },
   { legacy: 'republic-services-earthday-campaign', title: 'Republic Services Earth Day Campaign', client: 'Republic Services', category: 'Marketing', summary: 'Email and internal marketing to Republic Services employees to promote eco-friendly items for Earth Day.' },
@@ -90,6 +96,7 @@ var PROJECTS = [
     tags: ['UX/UI', 'Research'],
     summary: 'One or two sentences. Shows on the Work page and at the top of the case study.',
     role: 'Your role', team: 'Who you worked with', timeline: '8 weeks', tools: ['Figma'],
+    feature: { image: 'images/my-project/feature.jpg', stat: '38%', label: 'conversion lift', line: 'One punchy sentence for the homepage card.' },  // optional: only for homepage cards
     cover: 'images/my-project/cover.jpg',   // card image on the Work page (4:3 works best)
     hero: 'images/my-project/hero.jpg',     // big image at the top of the case study (16:9 works best)
     overview: ['Paragraph one.', 'Paragraph two.'],
