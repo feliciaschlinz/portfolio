@@ -24,18 +24,13 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
 .photo{margin:0;position:relative;overflow:hidden;border-radius:20px;min-height:360px}
 @media(max-width:800px){.photo{min-height:0;aspect-ratio:4/5}}
 .photo:not(.ph){background:var(--card)}
-.photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:70% 20%;filter:url(#duo)}
-.photo img.nat{filter:none;opacity:0;transition:opacity .5s}
-@media(hover:hover){.photo:hover img.nat{opacity:1}}
-.photo[data-look="natural"] img{filter:none}
-.photo[data-look="natural"] img.nat{display:none}
+.photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:70% 20%}
 .photo.ph{display:flex;align-items:center;justify-content:center;background:var(--card);border:2px dashed var(--o)}
 .photo .hint{position:relative;margin:16px;padding:6px 12px;border-radius:99px;background:var(--bg);color:var(--ot);font-size:13px;font-weight:700;text-align:center}
 </style>
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="duo" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0 0 0 1 0"/><feComponentTransfer><feFuncR type="table" tableValues="0.078 0.894 0.925"/><feFuncG type="table" tableValues="0.063 0.235 0.914"/><feFuncB type="table" tableValues="0.047 0.075 0.882"/></feComponentTransfer></filter></svg>
 <div id="site-nav"></div>
 <script src="nav.js"></script>
 
@@ -46,8 +41,8 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
       <h1 class="page">About</h1>
       <p class="statement">A multidisciplinary creative and digital experience leader with 11 years connecting creative thinking, technology, and business strategy.</p>
     </div>
-    <!-- Photo: assets/Felicia.jpg. Look: duotone (default, full color on hover). To show it in natural color instead, change data-look="natural" to data-look="natural". -->
-    <figure class="photo" data-look="duotone"><img src="assets/Felicia.jpg" alt="Portrait of Felicia Schlinz" width="1242" height="1242"><img class="nat" src="assets/Felicia.jpg" alt="" aria-hidden="true"></figure>
+    <!-- Photo: assets/Felicia.jpg (shown in its natural colors) -->
+    <figure class="photo"><img src="assets/Felicia.jpg" alt="Portrait of Felicia Schlinz" width="1242" height="1242"></figure>
   </div>
 
   <div class="chap rv">
