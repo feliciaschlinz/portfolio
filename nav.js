@@ -6,7 +6,7 @@
 (function () {
   var LINKS = [
     { label: 'Work',       href: 'work.html' },
-    { label: 'Experience', href: 'index.html#experience' },
+    { label: 'Experience', href: 'experience.html' },
     { label: 'About',      href: 'about.html' },
     { label: 'Contact',    href: 'index.html#contact' }
   ];
