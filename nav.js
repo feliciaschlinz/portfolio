@@ -15,6 +15,7 @@
   ];
   var EMAIL = 'felicia.schlinz@gmail.com';
   var LINKEDIN = 'https://www.linkedin.com/in/feliciaschlinz/';
+  var NAME = 'felicia.schlinz'; // shown in the header; letters roll on hover
   var BREAKPOINT = 860; // px: at or below this width the Menu button replaces the links
 
   var EASE = 'cubic-bezier(.7,0,.2,1)';
@@ -27,7 +28,14 @@
     '.site-header.solid{background:var(--o,#e43c13);color:var(--ot,#14100c)}',
     '.site-header.open{background:transparent;color:var(--ot,#14100c)}',
     '.site-header a{color:inherit;text-decoration:none}',
-    '.site-logo{font-size:22px;font-weight:700;letter-spacing:-.02em}',
+    '.site-logo{font-size:22px;display:inline-flex;font-weight:700;letter-spacing:-.02em}',
+    /* name hover: letters roll up and are replaced by a copy sliding in from below */
+    '.site-logo .ch{display:inline-block;position:relative;overflow:hidden;height:1.15em;line-height:1.15em;vertical-align:top}',
+    '.site-logo .ch>i{display:block;font-style:normal;transition:transform .45s ' + EASE + ';transition-delay:calc(var(--i) * 22ms)}',
+    '.site-logo .ch>i+i{position:absolute;left:0;top:100%;color:var(--o,#e43c13)}',
+    '.site-header.solid .site-logo .ch>i+i,.site-header.open .site-logo .ch>i+i{color:var(--bg,#ece9e1)}',
+    '@media(hover:hover){.site-logo:hover .ch>i{transform:translateY(-100%)}}',
+    '.site-logo:focus-visible .ch>i{transform:translateY(-100%)}',
     '.site-nav{display:flex;gap:28px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.01em}',
     '.site-nav a{position:relative}',
     '.site-nav a::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s}',
@@ -71,7 +79,7 @@
     '.menu-foot{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:32px;font-size:16px;font-weight:700;opacity:0;transform:translateY(12px);transition:opacity .2s,transform .2s}',
     '.menu-foot a{color:inherit;text-decoration:none;border-bottom:2px solid currentColor}',
     '.site-menu.open .menu-foot{opacity:1;transform:none;transition:opacity .5s .65s,transform .5s .65s}',
-    '@media(prefers-reduced-motion:reduce){.site-menu,.site-menu li a,.site-menu.open li a,.menu-foot,.site-menu.open .menu-foot,.site-toggle .ico i{transition:none!important}}'
+    '@media(prefers-reduced-motion:reduce){.site-menu,.site-menu li a,.site-menu.open li a,.menu-foot,.site-menu.open .menu-foot,.site-toggle .ico i,.site-logo .ch>i{transition:none!important}}'
   ].join('\n');
 
   var style = document.createElement('style');
@@ -97,7 +105,7 @@
 
   mount.innerHTML =
     '<header class="site-header" id="hdr">' +
-      '<a class="site-logo" href="index.html#top">felicia.schlinz</a>' +
+      '<a class="site-logo" href="index.html#top" aria-label="felicia.schlinz">' + NAME.split('').map(function (c, i) { return '<span class="ch" aria-hidden="true" style="--i:' + i + '"><i>' + c + '</i><i>' + c + '</i></span>'; }).join('') + '</a>' +
       '<nav class="site-nav" aria-label="Main">' + desktop + '</nav>' +
       '<button class="site-toggle" id="site-toggle" type="button" aria-expanded="false" aria-controls="site-menu">' +
         '<span class="lbl">Menu</span><span class="ico" aria-hidden="true"><i></i><i></i></span>' +
