@@ -116,3 +116,16 @@ footer{background:var(--o);color:var(--ot);text-align:center;font-size:13px;padd
 .fc:focus-visible{outline:3px solid var(--ot);outline-offset:6px;border-radius:20px}
 @media(max-width:800px){.feat{grid-template-columns:1fr;gap:56px}}
 @media(prefers-reduced-motion:reduce){.fc .ft{transition:none}.fc:hover .ft{transform:none}}
+
+/* homepage selected work: list rows with a thumbnail and a highlight */
+.row.wr{grid-template-columns:200px 1.55fr 1.25fr;align-items:center;gap:28px}
+.row.wr .th{display:block;aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative}
+.row.wr .th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.row.wr .d{line-height:1.4}
+.row.wr .st{font-family:var(--display);font-weight:400;font-size:clamp(34px,3.4vw,48px);line-height:1;color:var(--o);text-transform:uppercase;vertical-align:-.08em;margin-right:6px}
+.row.wr em{font-style:normal;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.row.wr .d br{display:block;content:"";margin-bottom:6px}
+a.row.wr:hover .st{color:var(--bg)}
+@media(max-width:1000px){.row.wr{grid-template-columns:150px 1fr;gap:10px 20px}.row.wr .th{grid-row:1/4}}
+@media(max-width:560px){.row.wr{grid-template-columns:1fr}.row.wr .th{grid-row:auto}}
+.row.wr .cat{display:block;margin-top:10px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
