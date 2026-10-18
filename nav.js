@@ -7,6 +7,7 @@
   var LINKS = [
     { label: 'Work',       href: 'index.html#work' },
     { label: 'Experience', href: 'index.html#experience' },
+    { label: 'About',      href: 'about.html' },
     { label: 'Contact',    href: 'index.html#contact' }
   ];
 
