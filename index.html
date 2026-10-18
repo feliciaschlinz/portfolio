@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Felicia Schlinz — UX Strategy & Digital Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f6f3ec; --surface:#fffdf8; --ink:#14171f; --muted:#62677a; --line:#dcd7ca;
+  --a:#f44719; --b:#1B6CE0; --c:#ffc845;
+  --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
+  --sans:"Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0e1017;--surface:#161923;--ink:#f2efe6;--muted:#9aa0b4;--line:#2a2e3c;}
+}
+:root[data-theme="dark"]{--bg:#0e1017;--surface:#161923;--ink:#f2efe6;--muted:#9aa0b4;--line:#2a2e3c;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:var(--serif);font-size:24px}
+.logo i{color:var(--a)}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14px}
+nav ul a{position:relative}
+nav ul a::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--a);transition:width .25s}
+nav ul a:hover::after{width:100%}
+.pill{border:1px solid var(--ink);border-radius:99px;padding:8px 16px;font-size:14px;transition:.2s}
+.pill:hover{background:var(--ink);color:var(--bg)}
+@media(max-width:700px){nav ul{display:none}}
+
+/* hero */
+.hero{position:relative;padding:110px 0 90px;overflow:hidden}
+.glow{position:absolute;width:520px;height:520px;border-radius:50%;pointer-events:none;left:0;top:0;
+  background:radial-gradient(circle,color-mix(in srgb,var(--c) 55%,transparent),transparent 65%);filter:blur(30px);opacity:.7;transform:translate(60vw,10px);transition:transform .35s ease-out}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;align-items:center}
+.eyebrow b{width:9px;height:9px;border-radius:50%;background:var(--a);animation:ping 1.8s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--a) 60%,transparent)}100%{box-shadow:0 0 0 12px transparent}}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,9vw,124px);line-height:.98;letter-spacing:-.02em;margin:22px 0 28px;max-width:13ch}
+h1 em{color:var(--a)}
+h1 .u{background:linear-gradient(var(--c),var(--c)) 0 92%/100% .16em no-repeat}
+.lede{max-width:540px;font-size:19px;color:var(--muted);margin:0 0 34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:99px;font-weight:500;background:var(--ink);color:var(--bg);transition:transform .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.o{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.stats{display:flex;gap:48px;margin-top:70px;flex-wrap:wrap}
+.stats div{font-family:var(--serif);font-size:54px;line-height:1}
+.stats span{display:block;font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:6px}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;background:var(--surface)}
+.marq div{display:inline-block;padding:20px 0;animation:slide 28s linear infinite;font-family:var(--serif);font-size:30px}
+.marq span{margin:0 22px}.marq span:nth-child(even){color:var(--a)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:100px 0}
+.kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,5.5vw,68px);line-height:1.02;margin:12px 0 48px;letter-spacing:-.01em}
+
+/* work */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .35s,box-shadow .35s;display:block}
+.card:hover{transform:translateY(-8px);box-shadow:0 24px 50px -22px rgba(0,0,0,.35)}
+.card:nth-child(even){margin-top:48px}
+@media(max-width:800px){.card:nth-child(even){margin-top:0}}
+.art{height:280px;position:relative;overflow:hidden}
+.art i{position:absolute;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .art i:nth-child(1){transform:translate(14px,-10px) rotate(8deg)}
+.card:hover .art i:nth-child(2){transform:translate(-16px,12px) rotate(-8deg)}
+.card:hover .art i:nth-child(3){transform:scale(1.15)}
+.a1{background:var(--a)}.a1 i:nth-child(1){width:55%;height:70%;left:10%;top:14%;background:var(--c);border-radius:26px}
+.a1 i:nth-child(2){width:36%;height:48%;right:10%;bottom:10%;background:var(--ink);border-radius:50%}
+.a1 i:nth-child(3){width:90px;height:90px;left:52%;top:12%;background:var(--surface);border-radius:20px}
+.a2{background:var(--b)}.a2 i:nth-child(1){width:70%;height:44%;left:15%;top:14%;background:var(--surface);border-radius:18px}
+.a2 i:nth-child(2){width:46%;height:26%;left:15%;bottom:12%;background:var(--c);border-radius:14px}
+.a2 i:nth-child(3){width:70px;height:70px;right:14%;bottom:14%;background:var(--a);border-radius:50%}
+.a3{background:var(--c)}.a3 i:nth-child(1){width:62%;height:62%;left:19%;top:19%;border:22px solid var(--ink);border-radius:50%}
+.a3 i:nth-child(2){width:30%;height:30%;right:12%;top:10%;background:var(--b);border-radius:12px}
+.a3 i:nth-child(3){width:64px;height:64px;left:12%;bottom:12%;background:var(--a);border-radius:50%}
+.a4{background:var(--ink)}.a4 i:nth-child(1){width:44%;height:76%;left:12%;top:12%;background:var(--b);border-radius:60px 60px 14px 14px}
+.a4 i:nth-child(2){width:36%;height:50%;right:12%;bottom:12%;background:var(--a);border-radius:14px}
+.a4 i:nth-child(3){width:70px;height:70px;right:20%;top:12%;background:var(--c);border-radius:50%}
+.info{padding:26px 28px 30px}
+.meta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+.info h3{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.08;margin:10px 0}
+.info p{margin:0 0 16px;color:var(--muted)}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags span{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:4px 12px}
+.win{color:var(--a);font-weight:600}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink)}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{padding:28px 24px 34px 0;border-right:1px solid var(--line)}
+.step:last-child{border:0}
+.step small{font-family:var(--serif);font-size:44px;color:var(--a);line-height:1}
+.step h3{font-size:20px;margin:14px 0 8px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:center}
+@media(max-width:800px){.about{grid-template-columns:1fr}}
+.portrait{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;background:var(--b);position:relative;overflow:hidden}
+.portrait::before{content:"";position:absolute;width:46%;aspect-ratio:1;border-radius:50%;background:var(--c);left:27%;top:24%}
+.portrait::after{content:"";position:absolute;width:84%;height:50%;border-radius:50% 50% 0 0;background:var(--a);left:8%;bottom:0}
+.about blockquote{font-family:var(--serif);font-size:clamp(28px,3.6vw,44px);line-height:1.15;margin:0 0 24px}
+.about p{color:var(--muted);max-width:52ch}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-radius:32px;padding:80px 40px;text-align:center;position:relative;overflow:hidden}
+.contact h2{margin:0 0 30px}
+.contact a.big{font-family:var(--serif);font-size:clamp(26px,5vw,56px);border-bottom:2px solid var(--c);transition:color .2s}
+.contact a.big:hover{color:var(--c)}
+.links{display:flex;gap:26px;justify-content:center;margin-top:36px;font-size:14px;opacity:.8}
+footer{padding:36px 0 50px;font-size:13px;color:var(--muted);text-align:center}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marq div,.eyebrow b{animation:none}.glow{transition:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top">Felicia<i>.</i></a>
+  <ul><li><a href="#work">Work</a></li><li><a href="#experience">Experience</a></li><li><a href="#about">About</a></li></ul>
+  <a class="pill" href="#contact">Let's talk</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow" id="glow"></div>
+  <div class="wrap">
+    <div class="eyebrow"><b></b> UX Strategy Manager · Staples Promotional Products</div>
+    <h1>UX strategy that <em>scales</em> across <span class="u">400+</span> storefronts.</h1>
+    <p class="lede">I'm Felicia Schlinz: UX strategist, creative thinker and front-end developer. I lead teams and transform ecommerce experiences into impactful, scalable digital products.</p>
+    <div class="cta"><a class="btn" href="#work">See selected work →</a><a class="btn o" href="#contact">Get in touch</a></div>
+    <div class="stats">
+      <div>11<span>years designing &amp; building</span></div>
+      <div>222<span>storefront launches in 2022</span></div>
+      <div>-32.5%<span>UX implementation time</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="marq"><div>
+  <span>UX Strategy</span><span>Team Leadership</span><span>eCommerce</span><span>Front-end Development</span><span>Creative Direction</span><span>Design Systems</span>
+  <span>UX Strategy</span><span>Team Leadership</span><span>eCommerce</span><span>Front-end Development</span><span>Creative Direction</span><span>Design Systems</span>
+</div></div>
+
+<section id="work"><div class="wrap">
+  <div class="kicker rv">Selected work</div>
+  <h2 class="rv">Enterprise eCommerce, designed and built.</h2>
+  <div class="grid">
+    <a class="card rv" href="https://feliciaschlinz.com/nvidia-ecommerce-wireframe" target="_blank" rel="noopener"><div class="art a1"><i></i><i></i><i></i></div>
+      <div class="info"><div class="meta"><span>01 — Nvidia</span><span>UI/UX + Dev</span></div>
+      <h3>Nvidia eCommerce merchandise store</h3>
+      <p>UI/UX design and development for Nvidia's merchandise site. Wireframes delivered in one week. <span class="win">95% first-pass approval.</span></p>
+      <div class="tags"><span>Wireframes</span><span>UX/UI</span><span>Development</span></div></div></a>
+    <a class="card rv" href="https://feliciaschlinz.com/staples-promo-digital-design-system" target="_blank" rel="noopener"><div class="art a2"><i></i><i></i><i></i></div>
+      <div class="info"><div class="meta"><span>02 — Staples Promo</span><span>Design system</span></div>
+      <h3>Staples Promo digital design system</h3>
+      <p>Design and development of the shared system behind reusable storefront themes. <span class="win">Powers 400+ sites.</span></p>
+      <div class="tags"><span>Design systems</span><span>Themes</span><span>Scale</span></div></div></a>
+    <a class="card rv" href="https://feliciaschlinz.com/airbnb-ecommerce-website" target="_blank" rel="noopener"><div class="art a3"><i></i><i></i><i></i></div>
+      <div class="info"><div class="meta"><span>03 — Airbnb</span><span>eCommerce</span></div>
+      <h3>Airbnb Goods merchandise website</h3>
+      <p>Design and development of the initial launch of Airbnb's merchandise site, plus later redesigns and campaigns. <span class="win">Launch to refresh.</span></p>
+      <div class="tags"><span>Web design</span><span>Development</span><span>Campaigns</span></div></div></a>
+    <a class="card rv" href="https://feliciaschlinz.com/fedex-ecommerce-website-design-development" target="_blank" rel="noopener"><div class="art a4"><i></i><i></i><i></i></div>
+      <div class="info"><div class="meta"><span>04 — FedEx</span><span>Pitch + Dev</span></div>
+      <h3>Global FedEx eCommerce website</h3>
+      <p>Design and development of the website pitch for FedEx's global merchandise program. <span class="win">Global program.</span></p>
+      <div class="tags"><span>Pitch</span><span>Prototyping</span><span>Development</span></div></div></a>
+  </div>
+  <p class="rv" style="margin-top:44px"><a class="btn o" href="https://feliciaschlinz.com/work" target="_blank" rel="noopener">See all projects →</a></p>
+</div></section>
+
+<section id="experience" style="padding-top:20px"><div class="wrap">
+  <div class="kicker rv">Experience</div>
+  <h2 class="rv">From art director to leading eight.</h2>
+  <div class="steps rv">
+    <div class="step"><small>2015</small><h3>Art Director → Senior AD</h3><p>Designed and coded custom enterprise storefronts in HTML and CSS, and directed photography.</p></div>
+    <div class="step"><small>2019</small><h3>Lead Creative</h3><p>Led design and front-end for storefront migrations. Built experiences for Apple, Airbnb and Deloitte.</p></div>
+    <div class="step"><small>2021</small><h3>Manager, Digital Creative</h3><p>Built the team from scratch. Led Nvidia and FedEx work and 222 storefront launches in 2022.</p></div>
+    <div class="step"><small>2025</small><h3>UX Strategy Manager</h3><p>Leads an eight-person team of designers, developers and implementers across 400+ storefronts.</p></div>
+  </div>
+</div></section>
+
+<section id="about" style="padding-top:40px"><div class="wrap about">
+  <div class="portrait rv" role="img" aria-label="Illustrated portrait placeholder"></div>
+  <div class="rv">
+    <div class="kicker">About</div>
+    <blockquote>I don't just define the vision. I design it, build it, and bring teams around it.</blockquote>
+    <p>With 11 years of experience, I've moved from hands-on design and front-end development into leading multidisciplinary teams that connect creative thinking, technology and business strategy, at enterprise scale.</p>
+    <p>Education: BA in Graphic Design &amp; Advertising, Morningside College, with Alpha Delta Sigma honors.</p>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:20px"><div class="wrap">
+  <div class="contact rv">
+    <div class="kicker" style="color:var(--c)">Next project</div>
+    <h2>Let's build something that scales.</h2>
+    <a class="big" href="https://feliciaschlinz.com/contact" target="_blank" rel="noopener">Get in touch →</a>
+    <div class="links"><a href="https://www.linkedin.com/in/feliciaschlinz/" target="_blank" rel="noopener">LinkedIn</a><a href="https://feliciaschlinz.com/work" target="_blank" rel="noopener">Full portfolio</a></div>
+  </div>
+</div></section>
+<footer>© 2026 Felicia Schlinz.</footer>
+
+<script>
+  var glow = document.getElementById('glow');
+  document.querySelector('.hero').addEventListener('pointermove', function (e) {
+    var r = this.getBoundingClientRect();
+    glow.style.transform = 'translate(' + (e.clientX - r.left - 260) + 'px,' + (e.clientY - r.top - 260) + 'px)';
+  });
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.rv').forEach(function (el, i) { el.style.transitionDelay = (i % 2) * 90 + 'ms'; io.observe(el); });
+</script>
+</body>
+</html>
