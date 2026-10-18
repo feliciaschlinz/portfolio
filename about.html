@@ -27,7 +27,7 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
 .photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:70% 20%;filter:url(#duo)}
 .photo img.nat{filter:none;opacity:0;transition:opacity .5s}
 @media(hover:hover){.photo:hover img.nat{opacity:1}}
-.photo[data-look="natural"] img{filter:saturate(.9) contrast(1.04) sepia(.12)}
+.photo[data-look="natural"] img{filter:none}
 .photo[data-look="natural"] img.nat{display:none}
 .photo.ph{display:flex;align-items:center;justify-content:center;background:var(--card);border:2px dashed var(--o)}
 .photo .hint{position:relative;margin:16px;padding:6px 12px;border-radius:99px;background:var(--bg);color:var(--ot);font-size:13px;font-weight:700;text-align:center}
@@ -46,7 +46,7 @@ h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform
       <h1 class="page">About</h1>
       <p class="statement">A multidisciplinary creative and digital experience leader with 11 years connecting creative thinking, technology, and business strategy.</p>
     </div>
-    <!-- Photo: assets/Felicia.jpg. Look: duotone (default, full color on hover). To show it in natural color instead, change data-look="duotone" to data-look="natural". -->
+    <!-- Photo: assets/Felicia.jpg. Look: duotone (default, full color on hover). To show it in natural color instead, change data-look="natural" to data-look="natural". -->
     <figure class="photo" data-look="duotone"><img src="assets/Felicia.jpg" alt="Portrait of Felicia Schlinz" width="1242" height="1242"><img class="nat" src="assets/Felicia.jpg" alt="" aria-hidden="true"></figure>
   </div>
 
