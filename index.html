@@ -51,31 +51,27 @@
 
 <section class="pad" id="work">
   <h2 class="rv">Selected<br>work</h2>
-  <!-- Selected work cards. To edit: change the image path, big stat, label and sentence in each card. -->
-  <div class="feat" id="projects">
-    <a class="fc rv" href="project.html?p=nvidia-ecommerce">
-      <span class="ft t0"><img src="images/nvidia-ecommerce/feature.jpg" alt="" loading="lazy"></span>
-      <span class="fs">95%</span><span class="fl">first-pass approval</span>
-      <span class="fh">Full end-to-end wireframes for the world leader in AI computing, delivered in one week.</span>
-      <span class="fn">Nvidia eCommerce UI/UX →</span>
+  <!-- Selected work rows. To edit: change the image path, big stat, label and sentence in each row. -->
+  <div class="list rv" id="projects">
+    <a class="row wr" href="project.html?p=nvidia-ecommerce">
+      <span class="th t0"><img src="images/nvidia-ecommerce/feature.jpg" alt="" loading="lazy"></span>
+      <span class="t">Nvidia eCommerce<sup>↗</sup></span>
+      <span class="d"><b class="st">95%</b> <em>first-pass approval</em><br>Full end-to-end wireframes for the world leader in AI computing, delivered in one week.<span class="cat">UI/UX + Development</span></span>
     </a>
-    <a class="fc rv" href="https://feliciaschlinz.com/staples-promo-digital-design-system" target="_blank" rel="noopener">
-      <span class="ft t1"><img src="images/staples-design-system/feature.jpg" alt="" loading="lazy"></span>
-      <span class="fs">400+</span><span class="fl">sites on one system</span>
-      <span class="fh">One shared system now powers every reusable storefront theme.</span>
-      <span class="fn">Staples Promo Design System<sup>↗</sup></span>
+    <a class="row wr" href="https://feliciaschlinz.com/staples-promo-digital-design-system" target="_blank" rel="noopener">
+      <span class="th t1"><img src="images/staples-design-system/feature.jpg" alt="" loading="lazy"></span>
+      <span class="t">Staples Promo Design System<sup>↗</sup></span>
+      <span class="d"><b class="st">400+</b> <em>sites on one system</em><br>One shared system now powers every reusable storefront theme.<span class="cat">Design system</span></span>
     </a>
-    <a class="fc rv" href="https://feliciaschlinz.com/airbnb-ecommerce-website" target="_blank" rel="noopener">
-      <span class="ft t2"><img src="images/airbnb-goods/feature.jpg" alt="" loading="lazy"></span>
-      <span class="fs">0 → 1</span><span class="fl">Airbnb Goods</span>
-      <span class="fh">Designed and built the launch of Airbnb’s merchandise site from the ground up.</span>
-      <span class="fn">Airbnb Goods<sup>↗</sup></span>
+    <a class="row wr" href="https://feliciaschlinz.com/airbnb-ecommerce-website" target="_blank" rel="noopener">
+      <span class="th t2"><img src="images/airbnb-goods/feature.jpg" alt="" loading="lazy"></span>
+      <span class="t">Airbnb Goods<sup>↗</sup></span>
+      <span class="d"><b class="st">0 → 1</b> <em>Airbnb Goods</em><br>Designed and built the launch of Airbnb’s merchandise site from the ground up.<span class="cat">eCommerce website</span></span>
     </a>
-    <a class="fc rv" href="https://feliciaschlinz.com/fedex-ecommerce-website-design-development" target="_blank" rel="noopener">
-      <span class="ft t3"><img src="images/fedex-global/feature.jpg" alt="" loading="lazy"></span>
-      <span class="fs">Global</span><span class="fl">merchandise program</span>
-      <span class="fh">The pitch that put FedEx’s worldwide merchandise program on one site.</span>
-      <span class="fn">Global FedEx eCommerce<sup>↗</sup></span>
+    <a class="row wr" href="https://feliciaschlinz.com/fedex-ecommerce-website-design-development" target="_blank" rel="noopener">
+      <span class="th t3"><img src="images/fedex-global/feature.jpg" alt="" loading="lazy"></span>
+      <span class="t">Global FedEx eCommerce<sup>↗</sup></span>
+      <span class="d"><b class="st">Global</b> <em>merchandise program</em><br>The pitch that put FedEx’s worldwide merchandise program on one site.<span class="cat">Pitch + Development</span></span>
     </a>
   </div>
   <a class="more rv" href="work.html">See all projects <span>↗</span></a>
@@ -171,7 +167,7 @@
 
 
   // hide card images that are missing so the colour pattern shows instead
-  document.querySelectorAll('.fc img').forEach(function (im) {
+  document.querySelectorAll('#projects img').forEach(function (im) {
     function bad() { im.remove(); }
     im.addEventListener('error', bad);
     if (im.complete && im.naturalWidth === 0) bad();
