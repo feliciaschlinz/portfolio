@@ -25,7 +25,7 @@ a{color:inherit;text-decoration:none}
 /* hero */
 .hero{padding-top:150px;overflow:hidden}
 .cols{display:grid;grid-template-columns:6fr 4fr;gap:clamp(24px,4vw,56px);font-size:16px;max-width:1500px}
-.cols p{margin:0;max-width:34ch}
+.cols p{margin:0;max-width:50ch}
 .cols p.lead{font-size:clamp(24px,2.9vw,42px);font-weight:700;line-height:1.05;letter-spacing:-.02em;color:var(--o);max-width:none}
 .cols a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:800px){.cols{grid-template-columns:1fr;gap:18px}}
@@ -51,7 +51,7 @@ a{color:inherit;text-decoration:none}
 
 /* generic */
 section{padding:clamp(70px,10vw,140px) 0 0}
-h2{color:var(--o);font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(64px,15vw,230px);line-height:.88;margin:0;letter-spacing:-.005em}
+h2{color:var(--o);font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(64px,15vw,230px);line-height:1;margin:0;letter-spacing:-.005em}
 .statement{color:var(--o);font-size:clamp(26px,3.4vw,46px);font-weight:700;line-height:1.08;letter-spacing:-.02em;max-width:22ch;margin:0 0 18px}
 .small{font-size:17px;max-width:46ch;margin:0}
 .stats{display:flex;gap:clamp(24px,6vw,90px);flex-wrap:wrap;margin-top:54px}
@@ -61,7 +61,7 @@ h2{color:var(--o);font-family:var(--display);font-weight:400;text-transform:uppe
 
 /* list rows */
 .list{margin-top:60px;border-top:1.5px solid var(--o)}
-.row{display:grid;grid-template-columns:1.4fr 1fr 160px;gap:24px;align-items:baseline;padding:26px 0;border-bottom:1.5px solid var(--o);position:relative;transition:padding .3s,background .3s,color .3s}
+.row{display:grid;grid-template-columns:1.4fr 1fr 160px;gap:24px;align-items:center;padding:26px 0;border-bottom:1.5px solid var(--o);position:relative;transition:padding .3s,background .3s,color .3s}
 a.row:hover{background:var(--o);color:var(--ot);padding-left:20px;padding-right:20px}
 a.row:hover .t{color:var(--bg)}
 .row .t{color:var(--o);font-size:clamp(28px,3.8vw,54px);font-weight:700;letter-spacing:-.03em;line-height:1}
@@ -88,5 +88,5 @@ a.row:hover sup{transform:translate(4px,-4px)}
 footer{background:var(--o);color:var(--ot);text-align:center;font-size:13px;padding:0 0 40px}
 
 .rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
-.rv.in{opacity:1;transform:none}
+.rv.in{opacity:1;transform:none} a.rv.in:hover span {transform:translate(4px, -4px)}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.giant span,.mock{animation:none}}
