@@ -100,6 +100,21 @@
       es.forEach(function (x) { if (x.isIntersecting) { runCount(x.target); cio.unobserve(x.target); } });
     }, { threshold: 0.6 });
     counters.forEach(function (c) { c.textContent = fmt(c, 0); cio.observe(c); });
+    // lock each stat to the width of its final number so nothing shifts while counting
+    function lockStats() {
+      counters.forEach(function (c) {
+        var box = c.parentNode, now = c.textContent;
+        box.style.minWidth = ''; c.style.minWidth = '';
+        c.textContent = fmt(c, parseFloat(c.dataset.to));
+        c.style.display = 'inline-block';
+        var w = c.offsetWidth, bw = box.offsetWidth;
+        c.style.minWidth = w + 'px'; box.style.minWidth = bw + 'px';
+        c.textContent = now;
+      });
+    }
+    lockStats();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(lockStats);
+    window.addEventListener('resize', lockStats);
   }
 
   var phs = document.querySelectorAll('.ph');
