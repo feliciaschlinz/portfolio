@@ -51,12 +51,32 @@
 
 <section class="pad" id="work">
   <h2 class="rv">Selected<br>work</h2>
-  <div class="feat" id="projects"></div>
-  <div class="list" id="plist">
-    <a class="row" href="project.html?p=nvidia-ecommerce"><span class="t">Nvidia eCommerce<sup>↗</sup></span><span class="d">Merchandise store. Wireframes in one week, 95% first-pass approval.</span><span class="l">UI/UX + Development</span></a>
-    <a class="row" href="https://feliciaschlinz.com/staples-promo-digital-design-system" target="_blank" rel="noopener"><span class="t">Staples Promo Design System<sup>↗</sup></span><span class="d">The shared system behind reusable storefront themes powering 400+ sites.</span><span class="l">Design system</span></a>
-    <a class="row" href="https://feliciaschlinz.com/airbnb-ecommerce-website" target="_blank" rel="noopener"><span class="t">Airbnb Goods<sup>↗</sup></span><span class="d">Design and development of the initial launch of Airbnb's merchandise site.</span><span class="l">eCommerce website</span></a>
-    <a class="row" href="https://feliciaschlinz.com/fedex-ecommerce-website-design-development" target="_blank" rel="noopener"><span class="t">Global FedEx eCommerce<sup>↗</sup></span><span class="d">Website pitch for FedEx's global merchandise program.</span><span class="l">Pitch + Development</span></a>
+  <!-- Selected work cards. To edit: change the image path, big stat, label and sentence in each card. -->
+  <div class="feat" id="projects">
+    <a class="fc rv" href="project.html?p=nvidia-ecommerce">
+      <span class="ft t0"><img src="images/nvidia-ecommerce/feature.jpg" alt="" loading="lazy"></span>
+      <span class="fs">95%</span><span class="fl">first-pass approval</span>
+      <span class="fh">Full end-to-end wireframes for the world leader in AI computing, delivered in one week.</span>
+      <span class="fn">Nvidia eCommerce UI/UX →</span>
+    </a>
+    <a class="fc rv" href="https://feliciaschlinz.com/staples-promo-digital-design-system" target="_blank" rel="noopener">
+      <span class="ft t1"><img src="images/staples-design-system/feature.jpg" alt="" loading="lazy"></span>
+      <span class="fs">400+</span><span class="fl">sites on one system</span>
+      <span class="fh">One shared system now powers every reusable storefront theme.</span>
+      <span class="fn">Staples Promo Design System<sup>↗</sup></span>
+    </a>
+    <a class="fc rv" href="https://feliciaschlinz.com/airbnb-ecommerce-website" target="_blank" rel="noopener">
+      <span class="ft t2"><img src="images/airbnb-goods/feature.jpg" alt="" loading="lazy"></span>
+      <span class="fs">0 → 1</span><span class="fl">Airbnb Goods</span>
+      <span class="fh">Designed and built the launch of Airbnb’s merchandise site from the ground up.</span>
+      <span class="fn">Airbnb Goods<sup>↗</sup></span>
+    </a>
+    <a class="fc rv" href="https://feliciaschlinz.com/fedex-ecommerce-website-design-development" target="_blank" rel="noopener">
+      <span class="ft t3"><img src="images/fedex-global/feature.jpg" alt="" loading="lazy"></span>
+      <span class="fs">Global</span><span class="fl">merchandise program</span>
+      <span class="fh">The pitch that put FedEx’s worldwide merchandise program on one site.</span>
+      <span class="fn">Global FedEx eCommerce<sup>↗</sup></span>
+    </a>
   </div>
   <a class="more rv" href="work.html">See all projects <span>↗</span></a>
 </section>
@@ -81,7 +101,6 @@
 </main>
 <div id="site-footer"></div>
 <script src="footer.js"></script>
-<script src="projects.js"></script>
 
 
 <script>
@@ -151,31 +170,12 @@
 
 
 
-  // Selected work cards: edit the text/images in projects.js (the feature field)
-  try { (function () {
-    if (typeof FEATURED === 'undefined' || typeof PROJECTS === 'undefined') return; // projects.js missing or old: keep the plain list
-    var box = document.getElementById('projects');
-    function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
-    FEATURED.forEach(function (key, n) {
-      var p = PROJECTS.filter(function (x) { return x.slug === key || x.legacy === key; })[0];
-      if (!p || !p.feature) return;
-      var f = p.feature;
-      var a = document.createElement('a');
-      a.className = 'fc rv'; a.href = p.href; if (p.external) { a.target = '_blank'; a.rel = 'noopener'; }
-      var src = f.image || p.cover;
-      a.innerHTML = '<span class="ft t' + (n % 6) + '">' + (src ? '<img src="' + esc(src) + '" alt="" loading="lazy">' : '') + '</span>' +
-        '<span class="fs">' + esc(f.stat) + '</span><span class="fl">' + esc(f.label) + '</span>' +
-        '<span class="fh">' + esc(f.line) + '</span>' +
-        '<span class="fn">' + esc(p.title) + (p.external ? '<sup>↗</sup>' : ' →') + '</span>';
-      box.appendChild(a);
-    });
-    if (box.children.length) { var pl = document.getElementById('plist'); if (pl) pl.remove(); }
-    box.querySelectorAll('img').forEach(function (im) {
-      function bad() { im.remove(); }
-      im.addEventListener('error', bad);
-      if (im.complete && im.naturalWidth === 0) bad();
-    });
-  })(); } catch (e) {}
+  // hide card images that are missing so the colour pattern shows instead
+  document.querySelectorAll('.fc img').forEach(function (im) {
+    function bad() { im.remove(); }
+    im.addEventListener('error', bad);
+    if (im.complete && im.naturalWidth === 0) bad();
+  });
 
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
