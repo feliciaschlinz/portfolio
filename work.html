@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Work — Felicia Schlinz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+h1.wp{color:var(--o);font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(64px,15vw,230px);line-height:.88;margin:0;letter-spacing:-.005em}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:48px}
+.chips button{font:inherit;font-weight:700;font-size:14px;color:var(--ot);background:transparent;border:1.5px solid var(--ot);border-radius:99px;padding:8px 16px;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--o);border-color:var(--o)}
+.count{margin:18px 0 0;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:40px 28px;margin-top:36px}
+.card{display:block}
+.tile{aspect-ratio:4/3;border-radius:20px;overflow:hidden;position:relative;transition:transform .35s}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card:hover .tile{transform:translateY(-6px) rotate(-.6deg)}
+.ct{display:block;margin-top:14px;font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1.05;color:var(--o)}
+.ct sup{font-size:.55em;margin-left:4px}
+.cc{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-top:8px}
+.cd{margin:6px 0 0;font-size:15px}
+</style>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+<div id="site-nav"></div>
+<script src="nav.js"></script>
+
+<main id="top">
+<section class="pad" style="padding-top:150px">
+  <h1 class="wp">All work</h1>
+  <div class="chips" id="chips" role="group" aria-label="Filter projects by category"></div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+</section>
+
+<div class="contact" id="contact">
+  <div class="pad">
+    <h2>Let's talk</h2>
+    <div class="links">
+      <a href="mailto:felicia.schlinz@gmail.com">felicia.schlinz@gmail.com</a>
+      <a href="https://www.linkedin.com/in/feliciaschlinz/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="FeliciaSchlinz_Resume.pdf" target="_blank" rel="noopener">Resume (PDF) ↗</a>
+    </div>
+  </div>
+</div>
+</main>
+<footer>© 2026 Felicia Schlinz</footer>
+
+<script src="projects.js"></script>
+<script>
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  var cats = ['All'];
+  PROJECTS.forEach(function (p) { if (cats.indexOf(p.category) < 0) cats.push(p.category); });
+
+  document.getElementById('grid').innerHTML = PROJECTS.map(function (p, i) {
+    var ext = p.external ? ' target="_blank" rel="noopener"' : '';
+    var img = p.cover ? '<img src="' + esc(p.cover) + '" alt="" loading="lazy">' : '';
+    return '<a class="card" data-cat="' + esc(p.category) + '" href="' + esc(p.href) + '"' + ext + '>' +
+      '<div class="tile t' + (i % 6) + '">' + img + '</div>' +
+      '<span class="ct">' + esc(p.title) + (p.external ? '<sup>↗</sup>' : '') + '</span>' +
+      '<span class="cc">' + esc(p.category) + (p.client ? ' · ' + esc(p.client) : '') + '</span>' +
+      '<p class="cd">' + esc(p.summary) + '</p></a>';
+  }).join('');
+
+  // hide cover images that don't exist yet so the pattern shows through
+  document.querySelectorAll('.tile img').forEach(function (im) {
+    function bad() { im.remove(); }
+    im.addEventListener('error', bad);
+    if (im.complete && im.naturalWidth === 0) bad();
+  });
+
+  var chips = document.getElementById('chips'), count = document.getElementById('count');
+  chips.innerHTML = cats.map(function (c, i) {
+    return '<button type="button" data-c="' + esc(c) + '" aria-pressed="' + (i === 0) + '">' + esc(c) + '</button>';
+  }).join('');
+
+  function apply(cat) {
+    var n = 0;
+    document.querySelectorAll('.card').forEach(function (card) {
+      var show = cat === 'All' || card.dataset.cat === cat;
+      card.hidden = !show; if (show) n++;
+    });
+    chips.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.c === cat)); });
+    count.textContent = n + (n === 1 ? ' project' : ' projects');
+  }
+  chips.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) apply(b.dataset.c); });
+  apply('All');
+</script>
+</body>
+</html>
