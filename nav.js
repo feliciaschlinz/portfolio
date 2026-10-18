@@ -5,7 +5,7 @@
    Edit the links below once and every page updates. */
 (function () {
   var LINKS = [
-    { label: 'Work',       href: 'index.html#work' },
+    { label: 'Work',       href: 'work.html' },
     { label: 'Experience', href: 'index.html#experience' },
     { label: 'About',      href: 'about.html' },
     { label: 'Contact',    href: 'index.html#contact' }
