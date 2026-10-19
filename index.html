@@ -54,22 +54,22 @@
   <h2 class="rv">Selected<br>work</h2>
   <!-- Selected work rows. To edit: change the image path, big stat, label and sentence in each row. -->
   <div class="list rv" id="projects">
-    <a class="row wr" href="project.html?p=nvidia-ecommerce">
+    <a class="row wr" data-p="nvidia-ecommerce" href="project.html?p=nvidia-ecommerce">
       <span class="th t0"><img src="images/nvidia-ecommerce/feature.jpg" alt="" loading="lazy"></span>
       <span class="t">Nvidia eCommerce<sup>↗</sup></span>
       <span class="d"><b class="st">95%</b> <br><em>first-pass approval</em><br>Full end-to-end wireframes for the world leader in AI computing, delivered in one week.<span class="cat">UI/UX + Development</span></span>
     </a>
-    <a class="row wr" href="https://feliciaschlinz.com/staples-promo-digital-design-system" target="_blank" rel="noopener">
+    <a class="row wr" data-p="staples-promo-digital-design-system" href="https://feliciaschlinz.com/staples-promo-digital-design-system" target="_blank" rel="noopener">
       <span class="th t1"><img src="images/staples-design-system/feature.jpg" alt="" loading="lazy"></span>
       <span class="t">Staples Promo eCommerce Theme<sup>↗</sup></span>
       <span class="d"><b class="st">Built to scale</b><br><em>Enterprise eCommerce</em><br>Leading UX strategy and design for a next-generation eCommerce theme that unifies experiences, introduces new functionality, and simplifies long-term maintenance.<span class="cat">UX STRATEGY + DESIGN SYSTEMS</span></span>
     </a>
-    <a class="row wr" href="https://feliciaschlinz.com/airbnb-ecommerce-website" target="_blank" rel="noopener">
+    <a class="row wr" data-p="airbnb-ecommerce-website" href="https://feliciaschlinz.com/airbnb-ecommerce-website" target="_blank" rel="noopener">
       <span class="th t2"><img src="images/airbnb-goods/feature.jpg" alt="" loading="lazy"></span>
       <span class="t">Enterprise Campaign Experience Strategy<sup>↗</sup></span>
       <span class="d"><b class="st">$96K</b><br><em>CAMPAIGN REVENUE</em><br>Conceived and launched a connected eCommerce strategy across 54 enterprise storefronts, driving seasonal engagement and sales.<span class="cat">UX STRATEGY + DIGITAL EXPERIENCE</span></span>
     </a>
-    <a class="row wr" href="https://feliciaschlinz.com/fedex-ecommerce-website-design-development" target="_blank" rel="noopener">
+    <a class="row wr" data-p="fedex-ecommerce-website-design-development" href="https://feliciaschlinz.com/fedex-ecommerce-website-design-development" target="_blank" rel="noopener">
       <span class="th t3"><img src="images/fedex-global/feature.jpg" alt="" loading="lazy"></span>
       <span class="t">Global FedEx eCommerce<sup>↗</sup></span>
       <span class="d"><b class="st">Global</b><br><em>merchandise program</em><br>The pitch that put FedEx’s worldwide merchandise program on one site.<span class="cat">UI/UX + DEVELOPMENT</span></span>
@@ -99,6 +99,7 @@
 </main>
 <div id="site-footer"></div>
 <script src="footer.js"></script>
+<script src="projects.js"></script>
 
 
 <script>
@@ -167,6 +168,15 @@
   }
 
 
+
+  // Selected work images come from each project's "cover" in projects.js (data-p on each row = the project's slug)
+  if (typeof PROJECTS !== 'undefined') {
+    document.querySelectorAll('#projects [data-p]').forEach(function (row) {
+      var p = PROJECTS.filter(function (x) { return x.slug === row.dataset.p; })[0];
+      var im = row.querySelector('.th img');
+      if (p && p.cover && im) { im.src = p.cover; im.alt = ''; }
+    });
+  }
 
   // hide card images that are missing so the colour pattern shows instead
   document.querySelectorAll('#projects img').forEach(function (im) {
