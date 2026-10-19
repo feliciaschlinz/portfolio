@@ -8,6 +8,13 @@
   var mount = document.getElementById('site-footer');
   if (!mount) return;
 
+  // the contact page already is the contact block, so it only gets the copyright line there
+  var file = location.pathname.split('/').pop() || 'index.html';
+  if (file === 'contact.html') {
+    mount.innerHTML = '<footer style="padding-top:40px;margin-top:clamp(80px,10vw,140px)">© 2026 Felicia Schlinz</footer>';
+    return;
+  }
+
   mount.innerHTML = [
     '<div class="contact" id="contact">',
     '  <div class="pad">',
