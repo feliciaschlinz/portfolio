@@ -19,48 +19,51 @@ var PROJECTS = [
     slug: 'nvidia-ecommerce', legacy: 'nvidia-ecommerce-wireframe', published: true,
     title: 'Nvidia eCommerce UI/UX', client: 'Nvidia', category: 'eCommerce',
     tags: ['UX/UI', 'Wireframes', 'Development'],
-    summary: "Design and development for Nvidia's eCommerce merchandise website.",
-    role: 'UX/UI design, creative lead',
-    team: 'Partnered with a UX interaction designer',
+    summary: "Designing and developing a new eCommerce experience to support a $9M business initiative under critical deadlines.",
+    role: 'UX/UI design, UX lead',
+    team: '',
     timeline: '',
     tools: [],
-    cover: 'images/nvidia-ecommerce/cover.jpg',
+    cover: 'assets/nvidia/hero.png',
     feature: { image: 'images/nvidia-ecommerce/feature.jpg', stat: '95%', label: 'first-pass approval', line: 'Full end-to-end wireframes for the world leader in AI computing, delivered in one week.' },
-    hero: 'images/nvidia-ecommerce/hero.jpg',
+    hero: 'assets/nvidia/hero.png',
     overview: [
-      "As the world leader in AI computing, Nvidia required more than just a basic eCommerce experience for their global employee merchandise platform.",
-      "In partnership with one of our UX interaction designers, I was tasked with developing all new UI/UX for an eCommerce theme that could be developed with our platform provider that was up to the high quality standards and net new functionality that was needed to support this large scale merchandise operation."
+      "NVIDIA's $9M eCommerce initiative required more than a redesigned storefront. It demanded a new eCommerce theme, a complete customer experience, and close coordination across UX, IT, and business teams to meet an aggressive launch timeline.",
+      "I partnered across these teams to define the experience, develop comprehensive wireframes, and build the front-end storefront. From information architecture and product discovery through cart and checkout, I helped bring a complex, high-priority initiative to life in record time."
     ],
     challenge: [
-      "Deliver an eCommerce theme that met Nvidia's high quality standards and the net new functionality needed to support a large-scale merchandise operation, and that our platform provider could build."
+      "Deliver a new eCommerce theme and end-to-end shopping experience for a $9M business initiative within an exceptionally tight timeline."
+		"The project required aligning business objectives, technical requirements, and UX decisions while building a new theme rather than relying on an existing storefront solution. Every decision needed to balance speed, functionality, and a cohesive customer experience."
     ],
     approach: [
-      { title: 'Immerse in the brand', text: 'We fully immersed ourselves in the Nvidia brand so every decision felt native to the company.' },
-      { title: 'Map the whole journey', text: 'We designed a full end-to-end experience that captured every interaction from site entry to order confirmation.' },
-      { title: 'Wireframe in depth', text: 'Extensive wireframes covered the whole experience and were delivered in one week.' },
-      { title: 'Build and launch', text: 'I led the team through development and launch of the theme with our platform provider.' }
+      { title: 'Align the teams', text: 'Partnered with UX, IT, and business stakeholders to establish requirements, align priorities, and identify the technical considerations needed to deliver on time.' },
+      { title: 'Architext the experience', text: 'Defined the customer journey, information architecture, and functionality across product discovery, product details, cart, and checkout.' },
+      { title: 'Design the UX', text: 'Created comprehensive end-to-end wireframes in one week, establishing a clear experience foundation and achieving 95% first-pass client approval.' },
+      { title: 'Build the new theme', text: 'Developed the front-end experience for a new eCommerce theme, working across teams to translate approved UX and creative into a functional storefront under critical deadlines.' }
     ],
     achievements: [
-      { value: '1 week', label: 'to deliver the theme wireframes' },
-      { value: '95%', label: 'of client expectations met on the first pass' },
-      { value: 'End-to-end', label: 'experience, from site entry to order confirmation' }
+      { value: '$9M', label: 'Business initiative supported' },
+      { value: '95%', label: 'First-pass client approval' },
+      { value: '1 Week', label: 'Complete UX wireframes delivered' }
     ],
     highlights: [
-      'Developed all-new UI/UX for the Nvidia eCommerce theme.',
-      'Delivered wireframes in one week.',
-      'Met 95% of client expectations on the first pass.',
-      'Led the team through development and launch.'
+      'Helped deliver a high-priority $9M eCommerce initiative through cross-functional collaboration with UX, IT, and business stakeholders.',
+      'Designed the end-to-end shopping experience and developed the front-end implementation for a new eCommerce theme.',
+      'Delivered comprehensive wireframes in one week, achieving 95% first-pass client approval.',
+      'Balanced technical constraints, business requirements, and customer experience needs to support an accelerated launch.'
     ],
     gallery: [
-      { src: 'images/nvidia-ecommerce/wireframe-01.jpg', alt: 'Nvidia eCommerce wireframe, screen 1', caption: '', wide: true },
-      { src: 'images/nvidia-ecommerce/wireframe-02.jpg', alt: 'Nvidia eCommerce wireframe, screen 2', caption: '' },
-      { src: 'images/nvidia-ecommerce/wireframe-03.jpg', alt: 'Nvidia eCommerce wireframe, screen 3', caption: '' },
-      { src: 'images/nvidia-ecommerce/wireframe-04.jpg', alt: 'Nvidia eCommerce wireframe, screen 4', caption: '' },
-      { src: 'images/nvidia-ecommerce/wireframe-05.jpg', alt: 'Nvidia eCommerce wireframe, screen 5', caption: '' },
-      { src: 'images/nvidia-ecommerce/wireframe-06.jpg', alt: 'Nvidia eCommerce wireframe, screen 6', caption: '' }
+      { src: 'assets/nvidia/wireframe-01.png', alt: 'Nvidia eCommerce wireframe, screen 1', caption: '', wide: true },
+      { src: 'assets/nvidia/wireframe-02.png', alt: 'Nvidia eCommerce wireframe, screen 2', caption: '' },
+      { src: 'assets/nvidia/wireframe-03.png', alt: 'Nvidia eCommerce wireframe, screen 3', caption: '' },
+      { src: 'assets/nvidia/wireframe-04.png', alt: 'Nvidia eCommerce wireframe, screen 4', caption: '' },
+      { src: 'assets/nvidia/wireframe-05.png', alt: 'Nvidia eCommerce wireframe, screen 5', caption: '' },
+      { src: 'assets/nvidia/wireframe-06.png', alt: 'Nvidia eCommerce wireframe, screen 6', caption: '' }
     ],
     results: [
-      "The internal team at Nvidia declared themselves tough critics, and the wireframes fully met their expectations."
+      "Successfully delivered the UX and front-end experience for a new NVIDIA eCommerce theme, supporting a $9M business initiative under an aggressive timeline."
+		"The complete UX wireframes were delivered in one week with 95% first-pass client approval, allowing the project to progress quickly into visual design and development."
+		"Through close partnership with UX, IT, and business stakeholders, the project brought together a new technical foundation and a cohesive shopping experience while meeting critical delivery deadlines."
     ]
   },
 
