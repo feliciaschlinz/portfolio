@@ -130,10 +130,11 @@ a.row.wr:hover .st{color:var(--bg)}
 @media(max-width:560px){.row.wr{grid-template-columns:1fr}.row.wr .th{grid-row:auto}}
 .row.wr .cat{display:block;margin-top:10px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 
-/* Selected work: on hover the thumbnail widens (same height, so rows below never jump) and the text slides over */
+/* Selected work: on hover the thumbnail grows wider and taller and the text slides over */
 @media(hover:hover) and (min-width:1001px){
   .row.wr{transition:grid-template-columns .45s cubic-bezier(.2,.8,.2,1),padding .3s,background .3s,color .3s}
-  .row.wr .th{aspect-ratio:auto;height:150px}
+  .row.wr .th{aspect-ratio:auto;height:150px;transition:height .45s cubic-bezier(.2,.8,.2,1)}
   a.row.wr:hover{grid-template-columns:320px 1.2fr 1.2fr}
+  a.row.wr:hover .th{height:240px}
 }
-@media(prefers-reduced-motion:reduce){.row.wr{transition:none}}
+@media(prefers-reduced-motion:reduce){.row.wr,.row.wr .th{transition:none!important}}
