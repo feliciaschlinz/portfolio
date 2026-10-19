@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — Felicia Schlinz</title>
+<meta name="description" content="Get in touch with Felicia Schlinz, UX strategy and digital experience leader.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+h1.page{color:var(--o);font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(64px,15vw,230px);line-height:.88;margin:0;letter-spacing:-.005em}
+.intro{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,5vw,80px);align-items:end;margin-top:clamp(28px,4vw,56px)}
+.intro .statement{margin:0;max-width:24ch}
+.intro p.note{font-size:clamp(17px,1.4vw,19px);max-width:46ch;margin:0}
+@media(max-width:800px){.intro{grid-template-columns:1fr;gap:20px}}
 
+/* the address is the headline */
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;margin-top:clamp(56px,8vw,110px);padding:clamp(28px,4vw,44px) 0;border-top:1.5px solid var(--o);border-bottom:1.5px solid var(--o)}
+.addr{position:relative;color:var(--o);font-family:var(--heavy);font-size:clamp(26px,5.4vw,88px);letter-spacing:-.045em;line-height:1;overflow-wrap:anywhere}
+.addr::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.06em;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.addr:hover::after,.addr:focus-visible::after{transform:scaleX(1)}
+.copy{font:inherit;font-weight:700;font-size:14px;color:var(--ot);background:transparent;border:1.5px solid var(--ot);border-radius:99px;padding:8px 16px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.copy:hover{background:var(--ot);color:var(--bg)}
+.copy[data-done="true"]{background:var(--o);border-color:var(--o);color:var(--ot)}
+
+/* the other ways in, using the site's row list */
+.ways{margin-top:0;border-top:0}
+.ways .row{grid-template-columns:1.1fr 1.4fr 200px}
+.ways .row .l{font-weight:700}
+@media(max-width:800px){.ways .row{grid-template-columns:1fr}}
+
+/* where I fit best: same layout as the About chapters */
+.fit{display:grid;grid-template-columns:1fr 1.7fr;gap:clamp(24px,6vw,100px);padding-top:clamp(70px,10vw,140px)}
+.fit h2{font-size:clamp(40px,5.2vw,84px);line-height:.95}
+.fit .items{border-top:1.5px solid var(--o)}
+.fit .item{padding:26px 0;border-bottom:1.5px solid var(--o)}
+.fit h3{margin:0 0 8px;font-size:clamp(26px,3.2vw,44px);color:var(--o);letter-spacing:-.02em;line-height:1.05}
+.fit p{margin:0;font-size:clamp(17px,1.4vw,19px);max-width:56ch}
+@media(max-width:800px){.fit{grid-template-columns:1fr;gap:22px}}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,12px);z-index:50;background:var(--ot);color:var(--bg);padding:10px 18px;border-radius:99px;font-size:14px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){.addr::after,.copy,.toast{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+<div id="site-nav"></div>
+<script src="nav.js"></script>
+
+<main id="top">
+<section class="pad" style="padding-top:150px">
+  <h1 class="page rv">Let's talk</h1>
+  <div class="intro rv">
+    <p class="statement">Happily leading a UX team today. Always open to a good conversation about what's next.</p>
+    <p class="note">If you're hiring for UX strategy, design leadership or digital experience, or you have a project that needs someone who can design it, build it and lead the team behind it, I'd like to hear about it. A few lines about the team, the problem and the timing is plenty.</p>
+  </div>
+
+  <div class="mail rv">
+    <a class="addr" id="addr" href="mailto:felicia.schlinz@gmail.com">felicia.schlinz@gmail.com</a>
+    <button class="copy" id="copy" type="button">Copy email</button>
+  </div>
+
+  <div class="list ways rv">
+    <a class="row" href="https://www.linkedin.com/in/feliciaschlinz/" target="_blank" rel="noopener">
+      <span class="t">LinkedIn<sup>↗</sup></span>
+      <span class="d">Career history, recommendations and mutual connections.</span>
+      <span class="l">in/feliciaschlinz</span>
+    </a>
+    <a class="row" href="assets/FeliciaSchlinz_Resume.pdf" target="_blank" rel="noopener">
+      <span class="t">Resume<sup>↗</sup></span>
+      <span class="d">Full work history, skills and education in one place.</span>
+      <span class="l">PDF</span>
+    </a>
+    <!-- EDIT: your city, and the kinds of setups you're open to -->
+    <div class="row">
+      <span class="t">Based in</span>
+      <span class="d">Your City, ST. Open to remote, hybrid or on&#8209;site roles.</span>
+      <span class="l">Replies in 1–2 days</span>
+    </div>
+  </div>
+
+  <div class="fit rv">
+    <h2>Where I fit best.</h2>
+    <div class="items">
+      <div class="item">
+        <h3>Lead it</h3>
+        <p>Setting UX strategy, building and growing multidisciplinary teams, and getting stakeholders behind a clear direction.</p>
+      </div>
+      <div class="item">
+        <h3>Design it</h3>
+        <p>UX/UI, design systems and creative direction for eCommerce and digital products at enterprise scale.</p>
+      </div>
+      <div class="item">
+        <h3>Build it</h3>
+        <p>Front-end development that carries an idea from wireframe to working product, without losing anything in the hand-off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="site-footer"></div>
+<script src="footer.js"></script>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
+  }, { threshold: 0.05 });
+  document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+  (function () {
+    var btn = document.getElementById('copy'), toast = document.getElementById('toast');
+    var address = document.getElementById('addr').textContent.trim(), timer;
+    function show(msg, ok) {
+      toast.textContent = msg; toast.classList.add('show');
+      if (ok) { btn.textContent = 'Copied'; btn.setAttribute('data-done', 'true'); }
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        toast.classList.remove('show'); btn.textContent = 'Copy email'; btn.removeAttribute('data-done');
+      }, 2200);
+    }
+    function fallback() {
+      var t = document.createElement('textarea'), ok = false;
+      t.value = address; t.setAttribute('readonly', ''); t.style.position = 'absolute'; t.style.left = '-9999px';
+      document.body.appendChild(t); t.select();
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(t);
+      ok ? show('Email copied', true) : show('Couldn’t copy. Select the address to copy it.');
+    }
+    btn.addEventListener('click', function () {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(address).then(function () { show('Email copied', true); }, fallback);
+          return;
+        }
+      } catch (e) {}
+      fallback();
+    });
+  })();
+</script>
+</body>
+</html>
