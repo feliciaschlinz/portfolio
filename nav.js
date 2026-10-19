@@ -11,7 +11,7 @@
     { label: 'Work',       href: 'work.html' },
     { label: 'Experience', href: 'experience.html' },
     { label: 'About',      href: 'about.html' },
-    { label: 'Contact',    href: 'index.html#contact' }
+    { label: 'Contact',    href: 'contact.html' }
   ];
   var EMAIL = 'felicia.schlinz@gmail.com';
   var LINKEDIN = 'https://www.linkedin.com/in/feliciaschlinz/';
