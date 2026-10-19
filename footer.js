@@ -21,7 +21,7 @@
     '    <h2>Let\'s talk</h2>',
     '    <div class="links">',
     '      <a href="mailto:felicia.schlinz@gmail.com">felicia.schlinz@gmail.com</a>',
-    '      <a href="https://www.linkedin.com/in/feliciaschlinz/" target="_blank" rel="noopener">LinkedIn ↗</a>',
+    '      <a href="https://www.linkedin.com/in/feliciaschlinz/" target="_blank" rel="noopener">LinkedIn <span class="arr" aria-hidden="true">↗</span></a>',
     '    </div>',
     '  </div>',
     '</div>',
