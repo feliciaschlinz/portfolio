@@ -115,7 +115,7 @@
       '<ol>' + items + '</ol>' +
       '<div class="menu-foot">' +
         '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>' +
-        '<a href="' + LINKEDIN + '" target="_blank" rel="noopener">LinkedIn ↗</a>' +
+        '<a href="' + LINKEDIN + '" target="_blank" rel="noopener">LinkedIn <span class="arr" aria-hidden="true">↗</span></a>' +
       '</div>' +
     '</nav>';
 
