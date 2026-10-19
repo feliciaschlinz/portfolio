@@ -137,3 +137,12 @@ a.row.wr:hover .st{color:var(--bg)}
   a.row.wr:hover{grid-template-columns:320px 1.2fr 1.2fr}
 }
 @media(prefers-reduced-motion:reduce){.row.wr{transition:none}}
+
+/* arrows on text links nudge in the direction they point */
+.arr{display:inline-block;transition:transform .3s}
+a:hover .arr,a:focus-visible .arr{transform:translate(.15em,-.15em)}
+a:hover .arr.back,a:focus-visible .arr.back{transform:translateX(-.25em)}
+a.row:focus-visible sup{transform:translate(4px,-4px)}
+.card .ct sup{display:inline-block;transition:transform .3s}
+.card:hover .ct sup,.card:focus-visible .ct sup{transform:translate(3px,-3px)}
+@media(prefers-reduced-motion:reduce){.arr,.row sup,.card .ct sup{transition:none}}
