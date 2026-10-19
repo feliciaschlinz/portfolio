@@ -25,7 +25,7 @@ a{color:inherit;text-decoration:none}
 /* hero */
 .hero{padding-top:150px;overflow:hidden}
 .cols{display:grid;grid-template-columns:6fr 4fr;gap:clamp(24px,4vw,56px);font-size:16px;max-width:1500px}
-.cols p{margin:0;max-width:50ch}
+.cols p{margin:0;max-width:34ch}
 .cols p.lead{font-size:clamp(24px,2.9vw,42px);font-weight:700;line-height:1.05;letter-spacing:-.02em;color:var(--o);max-width:none}
 .cols a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:800px){.cols{grid-template-columns:1fr;gap:18px}}
@@ -61,7 +61,7 @@ h2{color:var(--o);font-family:var(--display);font-weight:400;text-transform:uppe
 
 /* list rows */
 .list{margin-top:60px;border-top:1.5px solid var(--o)}
-.row{display:grid;grid-template-columns:1.4fr 1fr 160px;gap:24px;align-items:center;padding:26px 0;border-bottom:1.5px solid var(--o);position:relative;transition:padding .3s,background .3s,color .3s}
+.row{display:grid;grid-template-columns:1.4fr 1fr 160px;gap:24px;align-items:baseline;padding:26px 0;border-bottom:1.5px solid var(--o);position:relative;transition:padding .3s,background .3s,color .3s}
 a.row:hover{background:var(--o);color:var(--ot);padding-left:20px;padding-right:20px}
 a.row:hover .t{color:var(--bg)}
 .row .t{color:var(--o);font-size:clamp(28px,3.8vw,54px);font-weight:700;letter-spacing:-.03em;line-height:1}
@@ -129,3 +129,11 @@ a.row.wr:hover .st{color:var(--bg)}
 @media(max-width:1000px){.row.wr{grid-template-columns:150px 1fr;gap:10px 20px}.row.wr .th{grid-row:1/4}}
 @media(max-width:560px){.row.wr{grid-template-columns:1fr}.row.wr .th{grid-row:auto}}
 .row.wr .cat{display:block;margin-top:10px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+
+/* Selected work: on hover the thumbnail widens (same height, so rows below never jump) and the text slides over */
+@media(hover:hover) and (min-width:1001px){
+  .row.wr{transition:grid-template-columns .45s cubic-bezier(.2,.8,.2,1),padding .3s,background .3s,color .3s}
+  .row.wr .th{aspect-ratio:auto;height:150px}
+  a.row.wr:hover{grid-template-columns:320px 1.2fr 1.2fr}
+}
+@media(prefers-reduced-motion:reduce){.row.wr{transition:none}}
