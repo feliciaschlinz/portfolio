@@ -74,7 +74,7 @@ h1.pt{color:var(--o);font-family:var(--display);font-weight:400;text-transform:u
   var idx = PROJECTS.findIndex(function (x) { return x.slug === slug; });
 
   if (idx < 0) {
-    root.innerHTML = '<section class="pad" style="padding-top:150px"><h1 class="pt">Not found</h1><p class="lead">That project doesn\'t exist yet.</p><a class="more" href="work.html">See all work ↗</a></section>';
+    root.innerHTML = '<section class="pad" style="padding-top:150px"><h1 class="pt">Not found</h1><p class="lead">That project doesn\'t exist yet.</p><a class="more" href="work.html">See all work <span class="arr" aria-hidden="true">↗</span></a></section>';
     return;
   }
   var p = PROJECTS[idx];
@@ -85,7 +85,7 @@ h1.pt{color:var(--o);font-family:var(--display);font-weight:400;text-transform:u
     .map(function (m) { return '<div><dt>' + m[0] + '</dt><dd>' + esc(m[1]) + '</dd></div>'; }).join('');
 
   var html = '<section class="pad" style="padding-top:150px">' +
-    '<div class="crumb"><a href="work.html">← All work</a></div>' +
+    '<div class="crumb"><a href="work.html"><span class="arr back" aria-hidden="true">←</span> All work</a></div>' +
     '<h1 class="pt">' + esc(p.title) + '</h1>' +
     '<p class="lead">' + esc(p.summary) + '</p>' +
     (meta ? '<dl class="meta">' + meta + '</dl>' : '') +
@@ -117,7 +117,7 @@ h1.pt{color:var(--o);font-family:var(--display);font-weight:400;text-transform:u
     if (c.published) { next = c; break; }
   }
   if (!next) next = PROJECTS[(idx + 1) % PROJECTS.length];
-  html += '<section class="pad"><a class="next" href="' + esc(next.href) + '"' + (next.external ? ' target="_blank" rel="noopener"' : '') + '><small>Next project</small><b>' + esc(next.title) + ' ↗</b></a></section>';
+  html += '<section class="pad"><a class="next" href="' + esc(next.href) + '"' + (next.external ? ' target="_blank" rel="noopener"' : '') + '><small>Next project</small><b>' + esc(next.title) + ' <span class="arr" aria-hidden="true">↗</span></b></a></section>';
 
   root.innerHTML = html;
 
