@@ -3,16 +3,15 @@
    TO ADD A PROJECT: copy the TEMPLATE block at the bottom, paste it into the PROJECTS list, fill it in.
    TO PUBLISH A CASE STUDY: fill in the fields and set published: true.
    While published is false, the project links to your old portfolio page (legacy) instead.
-   HOMEPAGE: the four cards under "Selected work" come from the feature field (image, stat, label, line).
-   Edit those words to change what grabs attention. To feature a different project, give it a
-   feature field and list its slug (or legacy name) in FEATURED just below.
+   HOMEPAGE: "Selected work" shows the first FOUR projects in this list that have a feature field.
+   To put a project on the homepage, give it a feature field. To change the homepage order, move
+   projects up or down in this list. To take one off the homepage, delete its feature field.
+   feature: { title, stat, label, line, cat }  (title is optional; it uses the project title if left out)
    IMAGES: put files in images/<slug>/ and list the paths below. Missing images show a placeholder
    that tells you exactly which file to add.
    Every field except slug, title, category and summary is optional; empty sections are hidden. */
 
 var LEGACY_BASE = 'https://feliciaschlinz.com/';
-
-var FEATURED = ['nvidia-ecommerce', 'staples-promo-digital-design-system', 'airbnb-ecommerce-website', 'fedex-ecommerce-website-design-development'];
 
 var PROJECTS = [
   {
@@ -25,7 +24,7 @@ var PROJECTS = [
     timeline: '',
     tools: [],
     cover: 'assets/nvidia/hero.png',
-    feature: { image: 'images/nvidia-ecommerce/feature.jpg', stat: '95%', label: 'first-pass approval', line: 'Full end-to-end wireframes for the world leader in AI computing, delivered in one week.' },
+    feature: { title: 'Nvidia eCommerce', stat: '95%', label: 'first-pass approval', line: 'Full end-to-end wireframes for the world leader in AI computing, delivered in one week.', cat: 'UI/UX + Development' },
     hero: 'assets/nvidia/hero.png',
     overview: [
       "NVIDIA's $9M eCommerce initiative required more than a redesigned storefront. It demanded a new eCommerce theme, a complete customer experience, and close coordination across UX, IT, and business teams to meet an aggressive launch timeline.",
@@ -77,7 +76,7 @@ var PROJECTS = [
     timeline: 'Ongoing, after 1+ year of advocacy',
     tools: [],
     cover: 'images/staples-design-system/feature.jpg',
-    feature: { image: 'images/staples-ecommerce-theme/feature.jpg', stat: '5 → 1', label: 'legacy themes, one foundation', line: "Making the case for one scalable theme to power 400+ enterprise storefronts." },
+    feature: { stat: '5 → 1', label: 'legacy themes, one foundation', line: "Championing a long-overdue platform transformation to replace five legacy themes with one scalable experience for 400+ enterprise storefronts.", cat: 'UX STRATEGY + LEADERSHIP' },
     hero: 'assets/staples-theme/hero.png',
     overview: [
       "Sometimes the biggest UX challenges aren't about design. They're about convincing an organization to invest in doing things differently.",
@@ -124,9 +123,9 @@ var PROJECTS = [
     ]
   },
 
-  { legacy: 'fedex-ecommerce-website-design-development', feature: { image: 'images/fedex-global/feature.jpg', stat: 'Global', label: 'merchandise program', line: "The pitch that put FedEx’s worldwide merchandise program on one site." }, title: 'Global FedEx eCommerce Website', client: 'FedEx', category: 'eCommerce', summary: "Design & development of website pitch for FedEx's global merchandise program." },
+  { legacy: 'fedex-ecommerce-website-design-development', cover: 'images/fedex-global/feature.jpg', feature: { title: 'Global FedEx eCommerce', stat: 'Global', label: 'merchandise program', line: "The pitch that put FedEx’s worldwide merchandise program on one site.", cat: 'UI/UX + DEVELOPMENT' }, title: 'Global FedEx eCommerce Website', client: 'FedEx', category: 'eCommerce', summary: "Design & development of website pitch for FedEx's global merchandise program." },
   { legacy: 'staples-promo-product-page-redesign', title: 'Staples Promo Product Pages UI/UX', client: 'Staples Promo', category: 'eCommerce', summary: 'Redesign of the product page with improved UX and added personality.' },
-  { legacy: 'staples-promo-digital-design-system', feature: { image: 'images/staples-design-system/feature.jpg', stat: '400+', label: 'sites on one system', line: "One shared system now powers every reusable storefront theme." }, title: 'Staples Promo Design System', client: 'Staples Promo', category: 'Strategy & Leadership', summary: "Design and development of Staples Promo's digital design system." },
+  { legacy: 'staples-promo-digital-design-system', title: 'Staples Promo Design System', client: 'Staples Promo', category: 'Strategy & Leadership', summary: "Design and development of Staples Promo's digital design system." },
   { legacy: 'staples-promo-photoshoot', title: 'Staples Promo Photo Shoot', client: 'Staples Promo', category: 'Art Direction', summary: 'Photo direction for Staples Promo brand launch, digital marketing, and e-commerce website.' },
   { legacy: '2020-airbnb-ecommerce', title: '2020 Airbnb E-Commerce Website', client: 'Airbnb', category: 'eCommerce', summary: "Redesign and development of Airbnb's corporate merchandise website to reflect updated brand guidelines." },
   { legacy: 'airbnb-digital-display-travel', title: 'Airbnb Digital Display', client: 'Airbnb', category: 'Marketing', summary: 'Animated digital display to market general awareness of their e-commerce website.' },
@@ -139,7 +138,7 @@ var PROJECTS = [
   { legacy: 'copy-of-intuit-marketing', title: 'Global Identity Rebrand', client: '', category: 'Marketing', summary: 'Miscellaneous email communications and digital marketing.' },
   { legacy: 'airbnb-email-marketing', title: 'Airbnb Email Marketing', client: 'Airbnb', category: 'Marketing', summary: 'Email marketing offer that promoted a discount and theme focused on the Year of the Dog.' },
   { legacy: 'mycogen-seeds-photoshoot', title: 'Mycogen Seeds Photo Shoot', client: 'Mycogen Seeds', category: 'Art Direction', summary: "Photo direction for Mycogen Seeds' digital email marketing, e-commerce website, and print catalog." },
-  { legacy: 'airbnb-ecommerce-website', feature: { image: 'images/airbnb-goods/feature.jpg', stat: '0 → 1', label: 'Airbnb Goods', line: "Designed and built the launch of Airbnb’s merchandise site from the ground up." }, title: 'Airbnb eCommerce Website', client: 'Airbnb', category: 'eCommerce', summary: "Design and development of the initial launch of Airbnb's merchandise website, Airbnb Goods." },
+  { legacy: 'airbnb-ecommerce-website', cover: 'images/airbnb-goods/feature.jpg', feature: { title: 'Enterprise Campaign Experience Strategy', stat: '$96K', label: 'CAMPAIGN REVENUE', line: 'Conceived and launched a connected eCommerce strategy across 54 enterprise storefronts, driving seasonal engagement and sales.', cat: 'UX STRATEGY + DIGITAL EXPERIENCE' }, title: 'Airbnb eCommerce Website', client: 'Airbnb', category: 'eCommerce', summary: "Design and development of the initial launch of Airbnb's merchandise website, Airbnb Goods." },
 
   { legacy: 'hr-block-box', title: 'H&R Block Marketing Box', client: 'H&R Block', category: 'Marketing', summary: "Design and ideation of a subscription marketing campaign to support H&R Block's merchandise store, the Block Shop." },
   { legacy: 'republic-services-earthday-campaign', title: 'Republic Services Earth Day Campaign', client: 'Republic Services', category: 'Marketing', summary: 'Email and internal marketing to Republic Services employees to promote eco-friendly items for Earth Day.' },
@@ -156,7 +155,7 @@ var PROJECTS = [
     tags: ['UX/UI', 'Research'],
     summary: 'One or two sentences. Shows on the Work page and at the top of the case study.',
     role: 'Your role', team: 'Who you worked with', timeline: '8 weeks', tools: ['Figma'],
-    feature: { image: 'images/my-project/feature.jpg', stat: '38%', label: 'conversion lift', line: 'One punchy sentence for the homepage card.' },  // optional: only for homepage cards
+    feature: { stat: '38%', label: 'conversion lift', line: 'One punchy sentence for the homepage card.', cat: 'UX STRATEGY' },  // optional: puts it on the homepage (first four with this field show)
     cover: 'images/my-project/cover.jpg',   // card image on the Work page (4:3 works best)
     hero: 'images/my-project/hero.jpg',     // big image at the top of the case study (16:9 works best)
     overview: ['Paragraph one.', 'Paragraph two.'],
