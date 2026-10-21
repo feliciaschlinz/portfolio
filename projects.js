@@ -67,23 +67,6 @@ var PROJECTS = [
     ]
   },
 
-  { legacy: 'fedex-ecommerce-website-design-development', feature: { image: 'images/fedex-global/feature.jpg', stat: 'Global', label: 'merchandise program', line: "The pitch that put FedEx’s worldwide merchandise program on one site." }, title: 'Global FedEx eCommerce Website', client: 'FedEx', category: 'eCommerce', summary: "Design & development of website pitch for FedEx's global merchandise program." },
-  { legacy: 'staples-promo-product-page-redesign', title: 'Staples Promo Product Pages UI/UX', client: 'Staples Promo', category: 'eCommerce', summary: 'Redesign of the product page with improved UX and added personality.' },
-  { legacy: 'staples-promo-digital-design-system', feature: { image: 'images/staples-design-system/feature.jpg', stat: '400+', label: 'sites on one system', line: "One shared system now powers every reusable storefront theme." }, title: 'Staples Promo Design System', client: 'Staples Promo', category: 'Strategy & Leadership', summary: "Design and development of Staples Promo's digital design system." },
-  { legacy: 'staples-promo-photoshoot', title: 'Staples Promo Photo Shoot', client: 'Staples Promo', category: 'Art Direction', summary: 'Photo direction for Staples Promo brand launch, digital marketing, and e-commerce website.' },
-  { legacy: '2020-airbnb-ecommerce', title: '2020 Airbnb E-Commerce Website', client: 'Airbnb', category: 'eCommerce', summary: "Redesign and development of Airbnb's corporate merchandise website to reflect updated brand guidelines." },
-  { legacy: 'airbnb-digital-display-travel', title: 'Airbnb Digital Display', client: 'Airbnb', category: 'Marketing', summary: 'Animated digital display to market general awareness of their e-commerce website.' },
-  { legacy: 'hrblock-marketing', title: 'H&R Block Marketing', client: 'H&R Block', category: 'Marketing', summary: "Miscellaneous digital marketing to support H&R Block's merchandise store, the Block Shop." },
-  { legacy: 'airbnb-custom-campaign', title: 'Airbnb Custom Campaign', client: 'Airbnb', category: 'Marketing', summary: "Digital and printed marketing pieces to promote custom merchandise that tells a story and reflects Airbnb's diverse culture." },
-  { legacy: 'republic-services-launch-teaser', title: 'Republic Services Launch Teaser', client: 'Republic Services', category: 'Marketing', summary: 'Animated email marketing to tease the launch of the new e-commerce website and new merchandise collection.' },
-  { legacy: 'airbnb-launch-campaign', title: 'Airbnb Launch Campaign', client: 'Airbnb', category: 'Marketing', summary: "Animated email marketing to promote the launch of Airbnb's merchandise website, Airbnb Goods." },
-  { legacy: 'airbnb-custom-merchandise-campaign', title: 'Airbnb Custom Merchandise Campaign', client: 'Airbnb', category: 'Marketing', summary: 'Email marketing to promote custom merchandise orders for Airbnb employees.' },
-  { legacy: 'airbnb-digital-display', title: 'Airbnb Digital Display (Pop-Up Shop)', client: 'Airbnb', category: 'Marketing', summary: 'Animated digital display to announce an on-site pop up shop at Airbnb Headquarters.' },
-  { legacy: 'copy-of-intuit-marketing', title: 'Global Identity Rebrand', client: '', category: 'Marketing', summary: 'Miscellaneous email communications and digital marketing.' },
-  { legacy: 'airbnb-email-marketing', title: 'Airbnb Email Marketing', client: 'Airbnb', category: 'Marketing', summary: 'Email marketing offer that promoted a discount and theme focused on the Year of the Dog.' },
-  { legacy: 'mycogen-seeds-photoshoot', title: 'Mycogen Seeds Photo Shoot', client: 'Mycogen Seeds', category: 'Art Direction', summary: "Photo direction for Mycogen Seeds' digital email marketing, e-commerce website, and print catalog." },
-  { legacy: 'airbnb-ecommerce-website', feature: { image: 'images/airbnb-goods/feature.jpg', stat: '0 → 1', label: 'Airbnb Goods', line: "Designed and built the launch of Airbnb’s merchandise site from the ground up." }, title: 'Airbnb eCommerce Website', client: 'Airbnb', category: 'eCommerce', summary: "Design and development of the initial launch of Airbnb's merchandise website, Airbnb Goods." },
-
   {
     slug: 'staples-ecommerce-theme', legacy: 'staples-ecommerce-theme', published: true,
     title: 'Modernizing Enterprise eCommerce', client: 'Staples Promo', category: 'Strategy & Leadership',
@@ -93,7 +76,7 @@ var PROJECTS = [
     team: 'My multidisciplinary UX team, IT, external development, and business stakeholders',
     timeline: 'Ongoing, after 1+ year of advocacy',
     tools: [],
-    cover: 'assets/staples-theme/hero.png',
+    cover: 'images/staples-design-system/feature.jpg',
     feature: { image: 'images/staples-ecommerce-theme/feature.jpg', stat: '5 → 1', label: 'legacy themes, one foundation', line: "Making the case for one scalable theme to power 400+ enterprise storefronts." },
     hero: 'assets/staples-theme/hero.png',
     overview: [
@@ -140,6 +123,23 @@ var PROJECTS = [
       "The biggest challenge remains securing the development capacity to bring the vision fully to life. I continue to advocate for its prioritization, connect technical limitations to business impact, and lead the work within our control."
     ]
   },
+
+  { legacy: 'fedex-ecommerce-website-design-development', feature: { image: 'images/fedex-global/feature.jpg', stat: 'Global', label: 'merchandise program', line: "The pitch that put FedEx’s worldwide merchandise program on one site." }, title: 'Global FedEx eCommerce Website', client: 'FedEx', category: 'eCommerce', summary: "Design & development of website pitch for FedEx's global merchandise program." },
+  { legacy: 'staples-promo-product-page-redesign', title: 'Staples Promo Product Pages UI/UX', client: 'Staples Promo', category: 'eCommerce', summary: 'Redesign of the product page with improved UX and added personality.' },
+  { legacy: 'staples-promo-digital-design-system', feature: { image: 'images/staples-design-system/feature.jpg', stat: '400+', label: 'sites on one system', line: "One shared system now powers every reusable storefront theme." }, title: 'Staples Promo Design System', client: 'Staples Promo', category: 'Strategy & Leadership', summary: "Design and development of Staples Promo's digital design system." },
+  { legacy: 'staples-promo-photoshoot', title: 'Staples Promo Photo Shoot', client: 'Staples Promo', category: 'Art Direction', summary: 'Photo direction for Staples Promo brand launch, digital marketing, and e-commerce website.' },
+  { legacy: '2020-airbnb-ecommerce', title: '2020 Airbnb E-Commerce Website', client: 'Airbnb', category: 'eCommerce', summary: "Redesign and development of Airbnb's corporate merchandise website to reflect updated brand guidelines." },
+  { legacy: 'airbnb-digital-display-travel', title: 'Airbnb Digital Display', client: 'Airbnb', category: 'Marketing', summary: 'Animated digital display to market general awareness of their e-commerce website.' },
+  { legacy: 'hrblock-marketing', title: 'H&R Block Marketing', client: 'H&R Block', category: 'Marketing', summary: "Miscellaneous digital marketing to support H&R Block's merchandise store, the Block Shop." },
+  { legacy: 'airbnb-custom-campaign', title: 'Airbnb Custom Campaign', client: 'Airbnb', category: 'Marketing', summary: "Digital and printed marketing pieces to promote custom merchandise that tells a story and reflects Airbnb's diverse culture." },
+  { legacy: 'republic-services-launch-teaser', title: 'Republic Services Launch Teaser', client: 'Republic Services', category: 'Marketing', summary: 'Animated email marketing to tease the launch of the new e-commerce website and new merchandise collection.' },
+  { legacy: 'airbnb-launch-campaign', title: 'Airbnb Launch Campaign', client: 'Airbnb', category: 'Marketing', summary: "Animated email marketing to promote the launch of Airbnb's merchandise website, Airbnb Goods." },
+  { legacy: 'airbnb-custom-merchandise-campaign', title: 'Airbnb Custom Merchandise Campaign', client: 'Airbnb', category: 'Marketing', summary: 'Email marketing to promote custom merchandise orders for Airbnb employees.' },
+  { legacy: 'airbnb-digital-display', title: 'Airbnb Digital Display (Pop-Up Shop)', client: 'Airbnb', category: 'Marketing', summary: 'Animated digital display to announce an on-site pop up shop at Airbnb Headquarters.' },
+  { legacy: 'copy-of-intuit-marketing', title: 'Global Identity Rebrand', client: '', category: 'Marketing', summary: 'Miscellaneous email communications and digital marketing.' },
+  { legacy: 'airbnb-email-marketing', title: 'Airbnb Email Marketing', client: 'Airbnb', category: 'Marketing', summary: 'Email marketing offer that promoted a discount and theme focused on the Year of the Dog.' },
+  { legacy: 'mycogen-seeds-photoshoot', title: 'Mycogen Seeds Photo Shoot', client: 'Mycogen Seeds', category: 'Art Direction', summary: "Photo direction for Mycogen Seeds' digital email marketing, e-commerce website, and print catalog." },
+  { legacy: 'airbnb-ecommerce-website', feature: { image: 'images/airbnb-goods/feature.jpg', stat: '0 → 1', label: 'Airbnb Goods', line: "Designed and built the launch of Airbnb’s merchandise site from the ground up." }, title: 'Airbnb eCommerce Website', client: 'Airbnb', category: 'eCommerce', summary: "Design and development of the initial launch of Airbnb's merchandise website, Airbnb Goods." },
 
   { legacy: 'hr-block-box', title: 'H&R Block Marketing Box', client: 'H&R Block', category: 'Marketing', summary: "Design and ideation of a subscription marketing campaign to support H&R Block's merchandise store, the Block Shop." },
   { legacy: 'republic-services-earthday-campaign', title: 'Republic Services Earth Day Campaign', client: 'Republic Services', category: 'Marketing', summary: 'Email and internal marketing to Republic Services employees to promote eco-friendly items for Earth Day.' },
