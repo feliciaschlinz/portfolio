@@ -3,8 +3,7 @@
      <div id="site-footer"></div>
      <script src="footer.js"></script>
    Edit the markup below once and every page updates.
-   (Styling comes from styles.css: .contact, .links and footer.
-    The rotating "Hire me to ..." headline brings its own small style block below.) */
+   (Styling comes from styles.css: .contact, .hire, .links and footer.) */
 (function () {
   var mount = document.getElementById('site-footer');
   if (!mount) return;
@@ -18,24 +17,6 @@
 
   // Words that rotate in the headline. Change or reorder them here.
   var WORDS = ['Lead', 'Design', 'Build'];
-
-  // styles for the headline, added once
-  if (!document.getElementById('hire-css')) {
-    var css = document.createElement('style');
-    css.id = 'hire-css';
-    css.textContent = [
-      '.hire{margin:0}',
-      '.hire .ln{display:block}',
-      '.hire .sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}',
-      // all words sit in one grid cell, so the slot is always as wide as the longest word and nothing jumps
-      '.hire .rot{display:inline-grid;overflow:hidden;color:var(--o);vertical-align:bottom;padding-bottom:.04em}',
-      '.hire .rot>span{grid-area:1/1;transform:translateY(105%);opacity:0;transition:transform .6s cubic-bezier(.7,0,.2,1),opacity .6s}',
-      '.hire .rot>span.on{transform:none;opacity:1}',
-      '.hire .rot>span.out{transform:translateY(-105%);opacity:0}',
-      '@media(prefers-reduced-motion:reduce){.hire .rot>span{transition:none}}'
-    ].join('\n');
-    document.head.appendChild(css);
-  }
 
   var words = WORDS.map(function (w, i) {
     return '<span' + (i === 0 ? ' class="on"' : '') + '>' + w + '</span>';
@@ -51,9 +32,9 @@
     '    <h2 class="hire">',
     '      <span class="sr">' + sentence + '</span>',
     '      <span aria-hidden="true">',
-    '        <span class="ln">Hire me to</span>',
-    '        <span class="ln"><span class="rot">' + words + '</span></span>',
-    '        <span class="ln">your next chapter.</span>',
+    '        <span class="hl">Hire me to</span>',
+    '        <span class="hl"><span class="rot">' + words + '</span></span>',
+    '        <span class="hl">your next chapter.</span>',
     '      </span>',
     '    </h2>',
     '    <div class="links">',
