@@ -15,17 +15,18 @@ var LEGACY_BASE = 'https://feliciaschlinz.com/';
 
 var PROJECTS = [
   {
-    slug: 'nvidia-ecommerce', legacy: 'nvidia-ecommerce-wireframe', published: true,
-    title: 'Nvidia eCommerce UI/UX', client: 'Nvidia', category: 'eCommerce',
-    tags: ['UX/UI', 'Wireframes', 'Development'],
+    slug: "nvidia-ecommerce",
+    legacy: "nvidia-ecommerce-wireframe",
+    published: true,
+    title: "Nvidia eCommerce UI/UX",
+    client: "Nvidia",
+    category: "eCommerce",
+    tags: ["UX/UI", "Wireframes", "Development"],
     summary: "Designing and developing a new eCommerce experience to support a $9M business initiative under critical deadlines.",
-    role: 'UX/UI design, UX lead',
-    team: '',
-    timeline: '',
-    tools: [],
-    cover: 'assets/nvidia/hero.png',
-    feature: { title: 'Nvidia eCommerce', stat: '95%', label: 'first-pass approval', line: 'Full end-to-end wireframes for the world leader in AI computing, delivered in one week.', cat: 'UI/UX + Development' },
-    hero: 'assets/nvidia/hero.png',
+    role: "UX/UI design, UX lead",
+    cover: "assets/nvidia/hero.png",
+    feature: {"title": "Nvidia eCommerce", "stat": "95%", "label": "first-pass approval", "line": "Full end-to-end wireframes for the world leader in AI computing, delivered in one week.", "cat": "UI/UX + Development"},
+    hero: "assets/nvidia/hero.png",
     overview: [
       "NVIDIA's $9M eCommerce initiative required more than a redesigned storefront. It demanded a new eCommerce theme, a complete customer experience, and close coordination across UX, IT, and business teams to meet an aggressive launch timeline.",
       "I partnered across these teams to define the experience, develop comprehensive wireframes, and build the front-end storefront. From information architecture and product discovery through cart and checkout, I helped bring a complex, high-priority initiative to life in record time."
@@ -35,29 +36,29 @@ var PROJECTS = [
       "The project required aligning business objectives, technical requirements, and UX decisions while building a new theme rather than relying on an existing storefront solution. Every decision needed to balance speed, functionality, and a cohesive customer experience."
     ],
     approach: [
-      { title: 'Align the teams', text: 'Partnered with UX, IT, and business stakeholders to establish requirements, align priorities, and identify the technical considerations needed to deliver on time.' },
-      { title: 'Architect the experience', text: 'Defined the customer journey, information architecture, and functionality across product discovery, product details, cart, and checkout.' },
-      { title: 'Design the UX', text: 'Created comprehensive end-to-end wireframes in one week, establishing a clear experience foundation and achieving 95% first-pass client approval.' },
-      { title: 'Build the new theme', text: 'Developed the front-end experience for a new eCommerce theme, working across teams to translate approved UX and creative into a functional storefront under critical deadlines.' }
+      {"title": "Align the teams", "text": "Partnered with UX, IT, and business stakeholders to establish requirements, align priorities, and identify the technical considerations needed to deliver on time."},
+      {"title": "Architect the experience", "text": "Defined the customer journey, information architecture, and functionality across product discovery, product details, cart, and checkout."},
+      {"title": "Design the UX", "text": "Created comprehensive end-to-end wireframes in one week, establishing a clear experience foundation and achieving 95% first-pass client approval."},
+      {"title": "Build the new theme", "text": "Developed the front-end experience for a new eCommerce theme, working across teams to translate approved UX and creative into a functional storefront under critical deadlines."}
     ],
     achievements: [
-      { value: '$9M', label: 'Business initiative supported' },
-      { value: '95%', label: 'First-pass client approval' },
-      { value: '1 Week', label: 'Complete UX wireframes delivered' }
+      {"value": "$9M", "label": "Business initiative supported"},
+      {"value": "95%", "label": "First-pass client approval"},
+      {"value": "1 Week", "label": "Complete UX wireframes delivered"}
     ],
     highlights: [
-      'Helped deliver a high-priority $9M eCommerce initiative through cross-functional collaboration with UX, IT, and business stakeholders.',
-      'Designed the end-to-end shopping experience and developed the front-end implementation for a new eCommerce theme.',
-      'Delivered comprehensive wireframes in one week, achieving 95% first-pass client approval.',
-      'Balanced technical constraints, business requirements, and customer experience needs to support an accelerated launch.'
+      "Helped deliver a high-priority $9M eCommerce initiative through cross-functional collaboration with UX, IT, and business stakeholders.",
+      "Designed the end-to-end shopping experience and developed the front-end implementation for a new eCommerce theme.",
+      "Delivered comprehensive wireframes in one week, achieving 95% first-pass client approval.",
+      "Balanced technical constraints, business requirements, and customer experience needs to support an accelerated launch."
     ],
     gallery: [
-      { src: 'assets/nvidia/wireframe-01.png', alt: 'Nvidia eCommerce wireframe, screen 1', caption: '', wide: true },
-      { src: 'assets/nvidia/wireframe-02.png', alt: 'Nvidia eCommerce wireframe, screen 2', caption: '' },
-      { src: 'assets/nvidia/wireframe-03.png', alt: 'Nvidia eCommerce wireframe, screen 3', caption: '' },
-      { src: 'assets/nvidia/wireframe-04.png', alt: 'Nvidia eCommerce wireframe, screen 4', caption: '' },
-      { src: 'assets/nvidia/wireframe-05.png', alt: 'Nvidia eCommerce wireframe, screen 5', caption: '' },
-      { src: 'assets/nvidia/wireframe-06.png', alt: 'Nvidia eCommerce wireframe, screen 6', caption: '' }
+      {"src": "assets/nvidia/wireframe-01.png", "alt": "Nvidia eCommerce wireframe, screen 1", "caption": "", "wide": true},
+      {"src": "assets/nvidia/wireframe-02.png", "alt": "Nvidia eCommerce wireframe, screen 2", "caption": ""},
+      {"src": "assets/nvidia/wireframe-03.png", "alt": "Nvidia eCommerce wireframe, screen 3", "caption": ""},
+      {"src": "assets/nvidia/wireframe-04.png", "alt": "Nvidia eCommerce wireframe, screen 4", "caption": ""},
+      {"src": "assets/nvidia/wireframe-05.png", "alt": "Nvidia eCommerce wireframe, screen 5", "caption": ""},
+      {"src": "assets/nvidia/wireframe-06.png", "alt": "Nvidia eCommerce wireframe, screen 6", "caption": ""}
     ],
     results: [
       "Successfully delivered the UX and front-end experience for a new NVIDIA eCommerce theme, supporting a $9M business initiative under an aggressive timeline.",
@@ -67,17 +68,20 @@ var PROJECTS = [
   },
 
   {
-    slug: 'staples-ecommerce-theme', legacy: 'staples-ecommerce-theme', published: true,
-    title: 'Modernizing Enterprise eCommerce', client: 'Staples Promo', category: 'Strategy & Leadership',
-    tags: ['UX Strategy', 'Leadership', 'Design Systems', 'Wireframes'],
+    slug: "staples-ecommerce-theme",
+    legacy: "staples-ecommerce-theme",
+    published: true,
+    title: "Modernizing Enterprise eCommerce",
+    client: "Staples Promo",
+    category: "Strategy & Leadership",
+    tags: ["UX Strategy", "Leadership", "Design Systems", "Wireframes"],
     summary: "Championing a long-overdue platform transformation to replace five legacy themes with one scalable experience designed to support 400+ enterprise storefronts.",
-    role: 'UX Strategy Manager, digital experience leadership',
-    team: 'My multidisciplinary UX team, IT, external development, and business stakeholders',
-    timeline: 'Ongoing, after 1+ year of advocacy',
-    tools: [],
-    cover: 'images/staples-design-system/feature.jpg',
-    feature: { stat: '5 → 1', label: 'legacy themes, one foundation', line: "Championing a long-overdue platform transformation to replace five legacy themes with one scalable experience for 400+ enterprise storefronts.", cat: 'UX STRATEGY + LEADERSHIP' },
-    hero: 'assets/staples-theme/hero.png',
+    role: "UX Strategy Manager, digital experience leadership",
+    team: "My multidisciplinary UX team, IT, external development, and business stakeholders",
+    timeline: "Ongoing, after 1+ year of advocacy",
+    cover: "images/staples-design-system/feature.jpg",
+    feature: {"stat": "5 → 1", "label": "legacy themes, one foundation", "line": "Championing a long-overdue platform transformation to replace five legacy themes with one scalable experience for 400+ enterprise storefronts.", "cat": "UX STRATEGY + LEADERSHIP"},
+    hero: "assets/staples-theme/hero.png",
     overview: [
       "Sometimes the biggest UX challenges aren't about design. They're about convincing an organization to invest in doing things differently.",
       "For more than a year, I've been advocating for a fundamental transformation of Staples Promo's enterprise eCommerce platform. Five aging themes, years of technical debt, and increasingly complex workarounds have made it difficult to improve experiences, deliver new functionality, or efficiently support more than 400 enterprise storefronts.",
@@ -92,15 +96,15 @@ var PROJECTS = [
       "With development capacity continually redirected toward immediate business demands, foundational improvements struggled to compete. I found myself advocating not just for a better experience, but for the long-term investment required to stop repeating the same problems."
     ],
     approach: [
-      { title: 'Recognize the bigger problem', text: "What appeared to be isolated UX and development challenges revealed a much larger issue. I connected recurring manual work, inconsistent functionality, and limited optimization opportunities to the underlying theme architecture, and began advocating for a fundamental change rather than another temporary fix." },
-      { title: 'Build the case for change', text: "Spent more than a year championing the initiative across business and technology leadership, pushing for the consolidation of five legacy themes into one scalable foundation. Continued advocating for prioritization and development capacity as competing initiatives repeatedly delayed progress." },
-      { title: 'Mobilize the team & expand the vision', text: "Led my multidisciplinary team beyond a traditional theme redesign, guiding the development of comprehensive wireframes, a centralized design library, reusable components, and consistent interaction patterns. Brought competitive research, accessibility standards, and customer acquisition and retention considerations into the experience strategy through partnerships across business teams." },
-      { title: 'Keep moving forward', text: "With the initiative on the technology roadmap but development capacity still constrained, I continue driving alignment across UX, IT, and external partners. My focus remains on advancing the experience foundation, addressing technical limitations, and advocating for the resources needed to deliver a sustainable solution for 400+ storefronts." }
+      {"title": "Recognize the bigger problem", "text": "What appeared to be isolated UX and development challenges revealed a much larger issue. I connected recurring manual work, inconsistent functionality, and limited optimization opportunities to the underlying theme architecture, and began advocating for a fundamental change rather than another temporary fix."},
+      {"title": "Build the case for change", "text": "Spent more than a year championing the initiative across business and technology leadership, pushing for the consolidation of five legacy themes into one scalable foundation. Continued advocating for prioritization and development capacity as competing initiatives repeatedly delayed progress."},
+      {"title": "Mobilize the team & expand the vision", "text": "Led my multidisciplinary team beyond a traditional theme redesign, guiding the development of comprehensive wireframes, a centralized design library, reusable components, and consistent interaction patterns. Brought competitive research, accessibility standards, and customer acquisition and retention considerations into the experience strategy through partnerships across business teams."},
+      {"title": "Keep moving forward", "text": "With the initiative on the technology roadmap but development capacity still constrained, I continue driving alignment across UX, IT, and external partners. My focus remains on advancing the experience foundation, addressing technical limitations, and advocating for the resources needed to deliver a sustainable solution for 400+ storefronts."}
     ],
     achievements: [
-      { value: '400+', label: 'Enterprise storefronts the new theme is intended to support' },
-      { value: '5 → 1', label: 'Legacy themes targeted for consolidation into one scalable foundation' },
-      { value: '1+ Year', label: 'Advocating for modernization and driving strategic prioritization' }
+      {"value": "400+", "label": "Enterprise storefronts the new theme is intended to support"},
+      {"value": "5 → 1", "label": "Legacy themes targeted for consolidation into one scalable foundation"},
+      {"value": "1+ Year", "label": "Advocating for modernization and driving strategic prioritization"}
     ],
     highlights: [
       "Advocating for Long-Term Change: Identified the systemic limitations holding back enterprise eCommerce and spent more than a year challenging the cycle of short-term fixes, consistently pushing for a sustainable solution despite competing priorities.",
@@ -109,10 +113,10 @@ var PROJECTS = [
       "Building for Enterprise Scale: Championing a unified architecture designed to reduce manual development, improve accessibility, extend previously isolated functionality, and enable continuous optimization across 400+ enterprise storefronts."
     ],
     gallery: [
-      { src: 'assets/staples-theme/wireframe-01.png', alt: 'Enterprise eCommerce theme wireframe, screen 1', caption: '', wide: true },
-      { src: 'assets/staples-theme/wireframe-02.png', alt: 'Enterprise eCommerce theme wireframe, screen 2', caption: '' },
-      { src: 'assets/staples-theme/wireframe-03.png', alt: 'Enterprise eCommerce theme wireframe, screen 3', caption: '' },
-      { src: 'assets/staples-theme/design-library.png', alt: 'Centralized design library components', caption: 'Centralized design library', wide: true }
+      {"src": "assets/staples-theme/wireframe-01.png", "alt": "Enterprise eCommerce theme wireframe, screen 1", "caption": "", "wide": true},
+      {"src": "assets/staples-theme/wireframe-02.png", "alt": "Enterprise eCommerce theme wireframe, screen 2", "caption": ""},
+      {"src": "assets/staples-theme/wireframe-03.png", "alt": "Enterprise eCommerce theme wireframe, screen 3", "caption": ""},
+      {"src": "assets/staples-theme/design-library.png", "alt": "Centralized design library components", "caption": "Centralized design library", "wide": true}
     ],
     results: [
       "The goal isn't simply to launch a new theme. It's to change what's possible for every enterprise storefront that comes after it.",
@@ -165,31 +169,62 @@ var PROJECTS = [
   },
 
   {
-    slug: "staples-promo-product-pages",
-    legacy: "staples-promo-product-page-redesign",
+    slug: "enterprise-campaign-strategy",
     published: true,
-    title: "Staples Promo Product Pages UI/UX",
-    client: "Staples Promo",
+    title: "Enterprise Campaign Experience Strategy",
+    category: "Strategy & Leadership",
+    tags: ["UX Strategy", "Digital Experience", "Campaigns"],
+    summary: "Conceived and launched a connected eCommerce strategy across 54 enterprise storefronts, driving seasonal engagement and sales.",
+    cover: "images/airbnb-goods/feature.jpg",
+    feature: {"title": "Enterprise Campaign Experience Strategy", "stat": "$96K", "label": "CAMPAIGN REVENUE", "line": "Conceived and launched a connected eCommerce strategy across 54 enterprise storefronts, driving seasonal engagement and sales.", "cat": "UX STRATEGY + DIGITAL EXPERIENCE"},
+    achievements: [
+      {"value": "$96K", "label": "Campaign revenue"},
+      {"value": "54", "label": "Enterprise storefronts"}
+    ]
+  },
+
+  {
+    slug: "airbnb-goods",
+    legacy: "airbnb-ecommerce-website",
+    published: true,
+    title: "Airbnb Goods eCommerce",
+    client: "Airbnb",
     category: "eCommerce",
-    tags: ["UX/UI", "User Research", "Interaction Design"],
-    summary: "Redesign of the product page with improved UX and added personality.",
-    role: "UX/UI design",
-    cover: "images/staples-promo-product-pages/cover.jpg",
-    hero: "images/staples-promo-product-pages/hero.jpg",
-    overview: ["Redesign of the eCommerce product pages for Staples Promo."],
+    tags: ["UX/UI", "Development", "Global"],
+    summary: "Design and development of Airbnb's merchandise website, Airbnb Goods, from its initial global launch through a 2020 redesign for Airbnb's updated brand.",
+    role: "UX/UI design and development",
+    team: "Airbnb brand team",
+    timeline: "2017 launch, 2020 redesign",
+    hero: "images/airbnb-goods/hero.jpg",
+    overview: [
+      "This project started with a landing page that introduced Airbnb employees to the new relationship with Staples as their merchandise provider, serving as a teaser for the US eCommerce site.",
+      "Airbnb Goods was designed to follow Airbnb brand guidelines paired with a fun, upbeat experience. Every merchandise collection featured illustrative graphics that gave personality to the entire shopping experience."
+    ],
     challenge: [
-      "User research showed that our audience was mostly purchasing for their work organizations and liked to have a sense of validation that they were making a good investment. User studies of our website also showed that our transactional pages lacked personality and fun."
+      "Launch a global merchandise program for Airbnb employees that felt as fun and upbeat as the brand itself.",
+      "The previous brand guidelines were very vibrant with an extensive color palette. The new direction had a more simplistic approach and limited the core colors to an updated version of Hof (dark grey), Rausch (logo color), and white. While the website we designed and developed in 2017 was fitting for the audience, we wanted to simplify the user experience to partner with the updated guidelines."
     ],
     approach: [
-      {"title": "Learn from users", "text": "Watched numerous user sessions to identify areas of frustration, alongside the research already conducted."},
-      {"title": "Apply the new brand", "text": "Redesigned the product page with new brand elements, a clean structure, and improved hierarchy."},
-      {"title": "Add validation", "text": "Speech bubbles appear after a timed delay to give the user a sense of validation that they are making a good choice."},
-      {"title": "Add personality", "text": "Wove office personality throughout the page, such as changing the 'logo upload' to the 'file cabinet' to store uploaded logos for later use."}
+      {"title": "Tease the launch", "text": "Designed a landing page introducing the Staples partnership ahead of the US site launch."},
+      {"title": "Welcome the world", "text": "Developed a global portal featuring \"welcome\" in revolving languages as the first point of entry for all global merchandise orders."},
+      {"title": "Launch and replicate", "text": "Designed and developed the US Airbnb eCommerce site, followed by replicated sites in APAC and EMEA."},
+      {"title": "Redesign for the new brand", "text": "After Airbnb’s late-2019 rebrand narrowed the core palette to Hof, Rausch, and white, partnered with the Airbnb brand team to update the global portal, country landing pages, and US site, making the customer journey as direct as possible."}
+    ],
+    highlights: [
+      "Global portal plus US, APAC, and EMEA storefronts.",
+      "Launch email featured on convertcart.com as a top product launch email that drove massive sales."
     ],
     gallery: [
-      {"src": "images/staples-promo-product-pages/01.jpg", "alt": "Staples Promo Product Pages UI/UX, image 1", "caption": "", "wide": true},
-      {"src": "images/staples-promo-product-pages/02.jpg", "alt": "Staples Promo Product Pages UI/UX, image 2", "caption": "", "wide": false},
-      {"src": "images/staples-promo-product-pages/03.jpg", "alt": "Staples Promo Product Pages UI/UX, image 3", "caption": "", "wide": false}
+      {"src": "images/airbnb-goods/01.jpg", "alt": "Airbnb eCommerce Website, image 1", "caption": "", "wide": true},
+      {"src": "images/airbnb-goods/02.jpg", "alt": "Airbnb eCommerce Website, image 2", "caption": "", "wide": false},
+      {"src": "images/airbnb-goods/03.jpg", "alt": "Airbnb eCommerce Website, image 3", "caption": "", "wide": false},
+      {"src": "images/airbnb-ecommerce-2020/01.jpg", "alt": "2020 Airbnb E-Commerce Website, image 1", "caption": "", "wide": true},
+      {"src": "images/airbnb-ecommerce-2020/02.jpg", "alt": "2020 Airbnb E-Commerce Website, image 2", "caption": "", "wide": false},
+      {"src": "images/airbnb-ecommerce-2020/03.jpg", "alt": "2020 Airbnb E-Commerce Website, image 3", "caption": "", "wide": false}
+    ],
+    results: [
+      "The launch email was featured on convertcart.com as a top product launch email that drove massive sales.",
+      "The 2020 redesign brought the global portal, country landing pages, and US site in line with Airbnb’s new brand, supported by a launch email blast."
     ]
   },
 
@@ -226,432 +261,31 @@ var PROJECTS = [
   },
 
   {
-    slug: "staples-promo-photo-shoot",
-    legacy: "staples-promo-photoshoot",
+    slug: "staples-promo-product-pages",
+    legacy: "staples-promo-product-page-redesign",
     published: true,
-    title: "Staples Promo Photo Shoot",
+    title: "Staples Promo Product Pages UI/UX",
     client: "Staples Promo",
-    category: "Art Direction",
-    tags: ["Art Direction", "Photography"],
-    summary: "Photo direction for Staples Promo brand launch, digital marketing, and e-commerce website.",
-    role: "Photo direction",
-    team: "Brand creative team, modeling agency, wardrobe stylist, hair & makeup stylist, product stylist, and photographer",
-    cover: "images/staples-promo-photo-shoot/cover.jpg",
-    hero: "images/staples-promo-photo-shoot/hero.jpg",
-    overview: [
-      "This photo shoot was planned to support the new brand launch of Staples Promo. The goal was to showcase branded merchandise in a vibrant environment to promote brand awareness.",
-      "The models were booked through a modeling agency and selected based on the extended Staples Promo demographic."
-    ],
-    gallery: [
-      {"src": "images/staples-promo-photo-shoot/01.jpg", "alt": "Staples Promo Photo Shoot, image 1", "caption": "", "wide": true},
-      {"src": "images/staples-promo-photo-shoot/02.jpg", "alt": "Staples Promo Photo Shoot, image 2", "caption": "", "wide": false},
-      {"src": "images/staples-promo-photo-shoot/03.jpg", "alt": "Staples Promo Photo Shoot, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "airbnb-ecommerce-2020",
-    legacy: "2020-airbnb-ecommerce",
-    published: true,
-    title: "2020 Airbnb E-Commerce Website",
-    client: "Airbnb",
     category: "eCommerce",
-    tags: ["UX/UI", "Development", "Email"],
-    summary: "Redesign and development of Airbnb's corporate merchandise website to reflect updated brand guidelines.",
-    role: "UX/UI design and development",
-    team: "Airbnb brand team",
-    cover: "images/airbnb-ecommerce-2020/cover.jpg",
-    hero: "images/airbnb-ecommerce-2020/hero.jpg",
-    overview: [
-      "This project was created to redesign the Airbnb merchandise eCommerce website to reflect the brand change Airbnb went through at the end of 2019."
-    ],
+    tags: ["UX/UI", "User Research", "Interaction Design"],
+    summary: "Redesign of the product page with improved UX and added personality.",
+    role: "UX/UI design",
+    cover: "images/staples-promo-product-pages/cover.jpg",
+    hero: "images/staples-promo-product-pages/hero.jpg",
+    overview: ["Redesign of the eCommerce product pages for Staples Promo."],
     challenge: [
-      "The previous brand guidelines were very vibrant with an extensive color palette. The new direction had a more simplistic approach and limited the core colors to an updated version of Hof (dark grey), Rausch (logo color), and white. While the website we designed and developed in 2017 was fitting for the audience, we wanted to simplify the user experience to partner with the updated guidelines."
+      "User research showed that our audience was mostly purchasing for their work organizations and liked to have a sense of validation that they were making a good investment. User studies of our website also showed that our transactional pages lacked personality and fun."
     ],
     approach: [
-      {"title": "Simplify the journey", "text": "Partnered with the brand team at Airbnb to update the global portal, country landing pages, and US Airbnb merchandise website to make the customer journey as direct as possible while representing the brand shift."}
+      {"title": "Learn from users", "text": "Watched numerous user sessions to identify areas of frustration, alongside the research already conducted."},
+      {"title": "Apply the new brand", "text": "Redesigned the product page with new brand elements, a clean structure, and improved hierarchy."},
+      {"title": "Add validation", "text": "Speech bubbles appear after a timed delay to give the user a sense of validation that they are making a good choice."},
+      {"title": "Add personality", "text": "Wove office personality throughout the page, such as changing the 'logo upload' to the 'file cabinet' to store uploaded logos for later use."}
     ],
     gallery: [
-      {"src": "images/airbnb-ecommerce-2020/01.jpg", "alt": "2020 Airbnb E-Commerce Website, image 1", "caption": "", "wide": true},
-      {"src": "images/airbnb-ecommerce-2020/02.jpg", "alt": "2020 Airbnb E-Commerce Website, image 2", "caption": "", "wide": false},
-      {"src": "images/airbnb-ecommerce-2020/03.jpg", "alt": "2020 Airbnb E-Commerce Website, image 3", "caption": "", "wide": false}
-    ],
-    results: [
-      "The concepts shown were implemented for the design and development of the website and the email blast that supported the launch."
-    ]
-  },
-
-  {
-    slug: "airbnb-digital-display-travel",
-    legacy: "airbnb-digital-display-travel",
-    published: true,
-    title: "Airbnb Digital Display",
-    client: "Airbnb",
-    category: "Marketing",
-    tags: ["Animation", "Digital Display"],
-    summary: "Animated digital display to market general awareness of their e-commerce website.",
-    cover: "images/airbnb-digital-display-travel/cover.jpg",
-    hero: "images/airbnb-digital-display-travel/hero.jpg",
-    overview: [
-      "This project was created to announce new merchandise via a digital display broadcast at Airbnb Headquarters in San Francisco. Airbnb's digital displays are usually short animations that quickly capture the audience as they cycle through broadcasts at the office.",
-      "The animated display was developed to create a sense of urgency to check out the new merch on the website by teasing a few of the new bag options available."
-    ],
-    gallery: [
-      {"src": "images/airbnb-digital-display-travel/01.jpg", "alt": "Airbnb Digital Display, image 1", "caption": "", "wide": true},
-      {"src": "images/airbnb-digital-display-travel/02.jpg", "alt": "Airbnb Digital Display, image 2", "caption": "", "wide": false},
-      {"src": "images/airbnb-digital-display-travel/03.jpg", "alt": "Airbnb Digital Display, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "hrblock-marketing",
-    legacy: "hrblock-marketing",
-    published: true,
-    title: "H&R Block Marketing",
-    client: "H&R Block",
-    category: "Marketing",
-    tags: ["Digital Marketing"],
-    summary: "Miscellaneous digital marketing to support H&R Block's merchandise store, the Block Shop.",
-    cover: "images/hrblock-marketing/cover.jpg",
-    hero: "images/hrblock-marketing/hero.jpg",
-    overview: [
-      "Digital imagery used in miscellaneous marketing pieces to promote custom merchandise at the Block Shop.",
-      "These Block squares were developed to support marketing offers, on-site events, and seasonal promotions with merchandise from the eCommerce website."
-    ],
-    gallery: [
-      {"src": "images/hrblock-marketing/01.jpg", "alt": "H&R Block Marketing, image 1", "caption": "", "wide": true},
-      {"src": "images/hrblock-marketing/02.jpg", "alt": "H&R Block Marketing, image 2", "caption": "", "wide": false},
-      {"src": "images/hrblock-marketing/03.jpg", "alt": "H&R Block Marketing, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "airbnb-custom-campaign",
-    legacy: "airbnb-custom-campaign",
-    published: true,
-    title: "Airbnb Custom Campaign",
-    client: "Airbnb",
-    category: "Marketing",
-    tags: ["Illustration", "Digital Display", "Print"],
-    summary: "Digital and printed marketing pieces to promote custom merchandise that tells a story and reflects Airbnb's diverse culture.",
-    cover: "images/airbnb-custom-campaign/cover.jpg",
-    hero: "images/airbnb-custom-campaign/hero.jpg",
-    overview: [
-      "This project was created to introduce Airbnb employees to our account representatives at Staples and start the conversation about creating custom merchandise.",
-      "We created a digital display that ran on their announcement screens, as well as a printed piece the reps could hand out at Airbnb Headquarters to promote their services and introduce themselves."
-    ],
-    approach: [
-      {"title": "Add a human touch", "text": "Created unique illustrations of the reps, aligned with the Airbnb brand, to give the pieces a sense of personality and human touch."}
-    ],
-    gallery: [
-      {"src": "images/airbnb-custom-campaign/01.jpg", "alt": "Airbnb Custom Campaign, image 1", "caption": "", "wide": true},
-      {"src": "images/airbnb-custom-campaign/02.jpg", "alt": "Airbnb Custom Campaign, image 2", "caption": "", "wide": false},
-      {"src": "images/airbnb-custom-campaign/03.jpg", "alt": "Airbnb Custom Campaign, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "republic-services-launch-teaser",
-    legacy: "republic-services-launch-teaser",
-    published: true,
-    title: "Republic Services Launch Teaser",
-    client: "Republic Services",
-    category: "Marketing",
-    tags: ["Email", "Animation"],
-    summary: "Animated email marketing to tease the launch of the new e-commerce website and new merchandise collection.",
-    cover: "images/republic-services-launch-teaser/cover.jpg",
-    hero: "images/republic-services-launch-teaser/hero.jpg",
-    overview: [
-      "This email blast was created to tease the launch of the new eCommerce merchandise collection and website, the Republic Services Company Store."
-    ],
-    approach: [
-      {"title": "Design for what works", "text": "Previous marketing communications and clickthroughs indicated that Republic Services employees responded best to animated GIFs, so the email was designed as a fun teaser with an animated Republic Services truck announcing that something big was coming."}
-    ],
-    gallery: [
-      {"src": "images/republic-services-launch-teaser/01.jpg", "alt": "Republic Services Launch Teaser, image 1", "caption": "", "wide": true},
-      {"src": "images/republic-services-launch-teaser/02.jpg", "alt": "Republic Services Launch Teaser, image 2", "caption": "", "wide": false},
-      {"src": "images/republic-services-launch-teaser/03.jpg", "alt": "Republic Services Launch Teaser, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "airbnb-launch-campaign",
-    legacy: "airbnb-launch-campaign",
-    published: true,
-    title: "Airbnb Launch Campaign",
-    client: "Airbnb",
-    category: "Marketing",
-    tags: ["Email", "Animation"],
-    summary: "Animated email marketing to promote the launch of Airbnb's merchandise website, Airbnb Goods.",
-    cover: "images/airbnb-launch-campaign/cover.jpg",
-    hero: "images/airbnb-launch-campaign/hero.jpg",
-    overview: [
-      "This email campaign was developed to introduce the new partnership between Airbnb and Staples as the new provider of Airbnb merchandise."
-    ],
-    approach: [
-      {"title": "Tease the launch", "text": "The first email teased the new collection coming in the fall and promoted some of the new services from the partnership."},
-      {"title": "Launch the site", "text": "The second email promoted the launch of the merchandise website and the new collections developed with Staples' merchandising department and Airbnb's marketing department, teasing some of the new items in the animation."}
-    ],
-    gallery: [
-      {"src": "images/airbnb-launch-campaign/01.jpg", "alt": "Airbnb Launch Campaign, image 1", "caption": "", "wide": true},
-      {"src": "images/airbnb-launch-campaign/02.jpg", "alt": "Airbnb Launch Campaign, image 2", "caption": "", "wide": false},
-      {"src": "images/airbnb-launch-campaign/03.jpg", "alt": "Airbnb Launch Campaign, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "airbnb-custom-merchandise-campaign",
-    legacy: "airbnb-custom-merchandise-campaign",
-    published: true,
-    title: "Airbnb Custom Merchandise Campaign",
-    client: "Airbnb",
-    category: "Marketing",
-    tags: ["Email"],
-    summary: "Email marketing to promote custom merchandise orders for Airbnb employees.",
-    cover: "images/airbnb-custom-merchandise-campaign/cover.jpg",
-    hero: "images/airbnb-custom-merchandise-campaign/hero.jpg",
-    overview: [
-      "These email blasts were created to promote custom merchandise orders and offer a marketing incentive to begin a first custom purchase."
-    ],
-    approach: [
-      {"title": "Real employees", "text": "The first email featured photography of Airbnb employees modeling items from the merchandise website, Airbnb Goods."},
-      {"title": "A local theme", "text": "The second email had a San Francisco theme, since the US headquarters is located there and most interactions with employees were on-site."}
-    ],
-    gallery: [
-      {"src": "images/airbnb-custom-merchandise-campaign/01.jpg", "alt": "Airbnb Custom Merchandise Campaign, image 1", "caption": "", "wide": true},
-      {"src": "images/airbnb-custom-merchandise-campaign/02.jpg", "alt": "Airbnb Custom Merchandise Campaign, image 2", "caption": "", "wide": false},
-      {"src": "images/airbnb-custom-merchandise-campaign/03.jpg", "alt": "Airbnb Custom Merchandise Campaign, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "airbnb-pop-up-shop-display",
-    legacy: "airbnb-digital-display",
-    published: true,
-    title: "Airbnb Digital Display (Pop-Up Shop)",
-    client: "Airbnb",
-    category: "Marketing",
-    tags: ["Animation", "Digital Display", "Events"],
-    summary: "Animated digital display to announce an on-site pop up shop at Airbnb Headquarters.",
-    cover: "images/airbnb-pop-up-shop-display/cover.jpg",
-    hero: "images/airbnb-pop-up-shop-display/hero.jpg",
-    overview: [
-      "This digital display was created to announce a pop-up shop in the cafeteria (Dine Dine Dine) of one of the Airbnb offices in San Francisco.",
-      "It was advertised the day of the event to create a sense of urgency and spur-of-the-moment shopping. The event had physical samples of the merchandise from the online shop so employees could touch and feel the merch in person."
-    ],
-    gallery: [
-      {"src": "images/airbnb-pop-up-shop-display/01.jpg", "alt": "Airbnb Digital Display (Pop-Up Shop), image 1", "caption": "", "wide": true},
-      {"src": "images/airbnb-pop-up-shop-display/02.jpg", "alt": "Airbnb Digital Display (Pop-Up Shop), image 2", "caption": "", "wide": false},
-      {"src": "images/airbnb-pop-up-shop-display/03.jpg", "alt": "Airbnb Digital Display (Pop-Up Shop), image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "global-identity-rebrand",
-    legacy: "copy-of-intuit-marketing",
-    published: true,
-    title: "Global Identity Rebrand",
-    client: "Staples",
-    category: "Marketing",
-    tags: ["Branding", "Web Design", "Development"],
-    summary: "Rebranding of Staples' global network, Global Identity.",
-    role: "Brand identity, web design and development",
-    cover: "images/global-identity-rebrand/cover.jpg",
-    hero: "images/global-identity-rebrand/hero.jpg",
-    overview: [
-      "Rebranding of Staples' global network, Global Identity. This project included an overhaul of previous branding to be more diverse, human, and inclusive."
-    ],
-    approach: [
-      {"title": "Listen to partners", "text": "Worked with partners across the global network to identify who they want to be, how they want to represent themselves, and how to elevate their current brand experience."},
-      {"title": "Build the identity", "text": "Developed a new logo, color palette, brand voice, and imagery to support the rebrand."},
-      {"title": "Launch the website", "text": "Designed and developed a new website to support their offerings."}
-    ],
-    gallery: [
-      {"src": "images/global-identity-rebrand/01.jpg", "alt": "Global Identity Rebrand, image 1", "caption": "", "wide": true},
-      {"src": "images/global-identity-rebrand/02.jpg", "alt": "Global Identity Rebrand, image 2", "caption": "", "wide": false},
-      {"src": "images/global-identity-rebrand/03.jpg", "alt": "Global Identity Rebrand, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "airbnb-email-marketing",
-    legacy: "airbnb-email-marketing",
-    published: true,
-    title: "Airbnb Email Marketing",
-    client: "Airbnb",
-    category: "Marketing",
-    tags: ["Email", "Illustration"],
-    summary: "Email marketing offer that promoted a discount and theme focused on the Year of the Dog.",
-    cover: "images/airbnb-email-marketing/cover.jpg",
-    hero: "images/airbnb-email-marketing/hero.jpg",
-    overview: [
-      "This campaign was created to promote the Chinese Zodiac Year of the Dog with a coordinating marketing offer. Dogs are a big part of Airbnb culture, so we focused on the Woof! collection of dog-friendly merchandise."
-    ],
-    approach: [
-      {"title": "Research the details", "text": "Researched the Chinese zodiac and made sure to avoid unlucky numbers and colors during the Year of the Dog."},
-      {"title": "Tie it to the product", "text": "The dog in the illustration wears one of the Airbnb branded collars featured in the Woof! collection."}
-    ],
-    gallery: [
-      {"src": "images/airbnb-email-marketing/01.jpg", "alt": "Airbnb Email Marketing, image 1", "caption": "", "wide": true},
-      {"src": "images/airbnb-email-marketing/02.jpg", "alt": "Airbnb Email Marketing, image 2", "caption": "", "wide": false},
-      {"src": "images/airbnb-email-marketing/03.jpg", "alt": "Airbnb Email Marketing, image 3", "caption": "", "wide": false}
-    ],
-    results: [
-      "The effort was supported with an email blast, a digital display, and a post in Airbnb's digital newsletter."
-    ]
-  },
-
-  {
-    slug: "mycogen-seeds-photo-shoot",
-    legacy: "mycogen-seeds-photoshoot",
-    published: true,
-    title: "Mycogen Seeds Photo Shoot",
-    client: "Mycogen Seeds",
-    category: "Art Direction",
-    tags: ["Art Direction", "Photography"],
-    summary: "Photo direction for Mycogen Seeds' digital email marketing, e-commerce website, and print catalog.",
-    role: "Photo direction",
-    team: "Merchandising team, marketing manager, modeling agency, and photographer",
-    cover: "images/mycogen-seeds-photo-shoot/cover.jpg",
-    hero: "images/mycogen-seeds-photo-shoot/hero.jpg",
-    overview: [
-      "This on-location photo shoot was planned to announce new Mycogen branded merchandise and support marketing campaigns throughout the year. The goal was to show the items being used in the target environment.",
-      "The models were booked through a modeling agency and selected based on the Mycogen demographic, and the shoot took place on an Iowa farm for authenticity. It was followed by product photography in the studio."
-    ],
-    gallery: [
-      {"src": "images/mycogen-seeds-photo-shoot/01.jpg", "alt": "Mycogen Seeds Photo Shoot, image 1", "caption": "", "wide": true},
-      {"src": "images/mycogen-seeds-photo-shoot/02.jpg", "alt": "Mycogen Seeds Photo Shoot, image 2", "caption": "", "wide": false},
-      {"src": "images/mycogen-seeds-photo-shoot/03.jpg", "alt": "Mycogen Seeds Photo Shoot, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "airbnb-goods",
-    legacy: "airbnb-ecommerce-website",
-    published: true,
-    title: "Airbnb eCommerce Website",
-    client: "Airbnb",
-    category: "eCommerce",
-    tags: ["UX/UI", "Development", "Global"],
-    summary: "Design and development of the initial launch of Airbnb's merchandise website, Airbnb Goods.",
-    role: "UX/UI design and development",
-    cover: "images/airbnb-goods/feature.jpg",
-    feature: {"title": "Enterprise Campaign Experience Strategy", "stat": "$96K", "label": "CAMPAIGN REVENUE", "line": "Conceived and launched a connected eCommerce strategy across 54 enterprise storefronts, driving seasonal engagement and sales.", "cat": "UX STRATEGY + DIGITAL EXPERIENCE"},
-    hero: "images/airbnb-goods/hero.jpg",
-    overview: [
-      "This project started with a landing page that introduced Airbnb employees to the new relationship with Staples as their merchandise provider, serving as a teaser for the US eCommerce site.",
-      "Airbnb Goods was designed to follow Airbnb brand guidelines paired with a fun, upbeat experience. Every merchandise collection featured illustrative graphics that gave personality to the entire shopping experience."
-    ],
-    approach: [
-      {"title": "Tease the launch", "text": "Designed a landing page introducing the Staples partnership ahead of the US site launch."},
-      {"title": "Welcome the world", "text": "Developed a global portal featuring \"welcome\" in revolving languages as the first point of entry for all global merchandise orders."},
-      {"title": "Launch and replicate", "text": "Designed and developed the US Airbnb eCommerce site, followed by replicated sites in APAC and EMEA."}
-    ],
-    highlights: [
-      "Global portal plus US, APAC, and EMEA storefronts.",
-      "Launch email featured on convertcart.com as a top product launch email that drove massive sales."
-    ],
-    gallery: [
-      {"src": "images/airbnb-goods/01.jpg", "alt": "Airbnb eCommerce Website, image 1", "caption": "", "wide": true},
-      {"src": "images/airbnb-goods/02.jpg", "alt": "Airbnb eCommerce Website, image 2", "caption": "", "wide": false},
-      {"src": "images/airbnb-goods/03.jpg", "alt": "Airbnb eCommerce Website, image 3", "caption": "", "wide": false}
-    ],
-    results: [
-      "The launch email was featured on convertcart.com as a top product launch email that drove massive sales.",
-      "The website was later redesigned in 2020 in accordance with Airbnb’s updated brand guidelines."
-    ]
-  },
-
-  {
-    slug: "hr-block-box",
-    legacy: "hr-block-box",
-    published: true,
-    title: "H&R Block Marketing Box",
-    client: "H&R Block",
-    category: "Marketing",
-    tags: ["Packaging", "Concept", "Copywriting"],
-    summary: "Design and ideation of a subscription marketing campaign to support H&R Block's merchandise store, the Block Shop.",
-    cover: "images/hr-block-box/cover.jpg",
-    hero: "images/hr-block-box/hero.jpg",
-    overview: [
-      "This project was a creative exercise initiated by the Staples team to develop fun and unique ways to engage H&R Block employees with custom swag."
-    ],
-    approach: [
-      {"title": "Present the concept", "text": "The merchandise was designed by our merch team; I presented the concept in an engaging way through packaging design, layout, and creative copy."}
-    ],
-    gallery: [
-      {"src": "images/hr-block-box/01.jpg", "alt": "H&R Block Marketing Box, image 1", "caption": "", "wide": true},
-      {"src": "images/hr-block-box/02.jpg", "alt": "H&R Block Marketing Box, image 2", "caption": "", "wide": false},
-      {"src": "images/hr-block-box/03.jpg", "alt": "H&R Block Marketing Box, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "republic-services-earth-day",
-    legacy: "republic-services-earthday-campaign",
-    published: true,
-    title: "Republic Services Earth Day Campaign",
-    client: "Republic Services",
-    category: "Marketing",
-    tags: ["Email", "Intranet"],
-    summary: "Email and internal marketing to Republic Services employees to promote eco-friendly items for Earth Day.",
-    cover: "images/republic-services-earth-day/cover.jpg",
-    hero: "images/republic-services-earth-day/hero.jpg",
-    overview: [
-      "Earth Day is a prominent holiday at Republic Services because of their devotion to recycling and keeping the Earth clean. Our goal was to promote eco-friendly merchandise ahead of Earth Day.",
-      "We sent an email blast and created a post for their intranet to market these items and direct users to the site for purchase."
-    ],
-    approach: [
-      {"title": "Own the color", "text": "Because Republic Services' main competitor has green brand colors, we always show the Earth in shades of blue to distinguish the brand."}
-    ],
-    gallery: [
-      {"src": "images/republic-services-earth-day/01.jpg", "alt": "Republic Services Earth Day Campaign, image 1", "caption": "", "wide": true},
-      {"src": "images/republic-services-earth-day/02.jpg", "alt": "Republic Services Earth Day Campaign, image 2", "caption": "", "wide": false},
-      {"src": "images/republic-services-earth-day/03.jpg", "alt": "Republic Services Earth Day Campaign, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "intuit-marketing",
-    legacy: "intuit-marketing",
-    published: true,
-    title: "Intuit Marketing",
-    client: "Intuit",
-    category: "Marketing",
-    tags: ["Email"],
-    summary: "Miscellaneous email communications and digital marketing.",
-    cover: "images/intuit-marketing/cover.jpg",
-    hero: "images/intuit-marketing/hero.jpg",
-    overview: [
-      "Miscellaneous email marketing targeted to Intuit employees.",
-      "These communications supported marketing offers, on-site events, and seasonal promotions with merchandise from their eCommerce website."
-    ],
-    gallery: [
-      {"src": "images/intuit-marketing/01.jpg", "alt": "Intuit Marketing, image 1", "caption": "", "wide": true},
-      {"src": "images/intuit-marketing/02.jpg", "alt": "Intuit Marketing, image 2", "caption": "", "wide": false},
-      {"src": "images/intuit-marketing/03.jpg", "alt": "Intuit Marketing, image 3", "caption": "", "wide": false}
-    ]
-  },
-
-  {
-    slug: "airbnb-pride-display",
-    legacy: "airbnb-digital-display-pride",
-    published: true,
-    title: "Airbnb Pride Digital Display",
-    client: "Airbnb",
-    category: "Marketing",
-    tags: ["Animation", "Digital Display"],
-    summary: "Animated digital display to promote pride merchandise at Airbnb.",
-    cover: "images/airbnb-pride-display/cover.jpg",
-    hero: "images/airbnb-pride-display/hero.jpg",
-    overview: [
-      "This project was developed to celebrate Pride Month and promote a collection designed for Airbnb employees featuring their trademark Bélo in rainbow form.",
-      "The display was created to represent diversity and inclusion, a key value at Airbnb, and was featured at both Airbnb offices in San Francisco."
-    ],
-    gallery: [
-      {"src": "images/airbnb-pride-display/01.jpg", "alt": "Airbnb Pride Digital Display, image 1", "caption": "", "wide": true},
-      {"src": "images/airbnb-pride-display/02.jpg", "alt": "Airbnb Pride Digital Display, image 2", "caption": "", "wide": false},
-      {"src": "images/airbnb-pride-display/03.jpg", "alt": "Airbnb Pride Digital Display, image 3", "caption": "", "wide": false}
+      {"src": "images/staples-promo-product-pages/01.jpg", "alt": "Staples Promo Product Pages UI/UX, image 1", "caption": "", "wide": true},
+      {"src": "images/staples-promo-product-pages/02.jpg", "alt": "Staples Promo Product Pages UI/UX, image 2", "caption": "", "wide": false},
+      {"src": "images/staples-promo-product-pages/03.jpg", "alt": "Staples Promo Product Pages UI/UX, image 3", "caption": "", "wide": false}
     ]
   },
 
@@ -683,6 +317,95 @@ var PROJECTS = [
     ],
     results: [
       "The concepts were designed and developed from homepage through checkout for their merchandise store."
+    ]
+  },
+
+  {
+    slug: "global-identity-rebrand",
+    legacy: "copy-of-intuit-marketing",
+    published: true,
+    title: "Global Identity Rebrand",
+    client: "Staples",
+    category: "Marketing",
+    tags: ["Branding", "Web Design", "Development"],
+    summary: "Rebranding of Staples' global network, Global Identity.",
+    role: "Brand identity, web design and development",
+    cover: "images/global-identity-rebrand/cover.jpg",
+    hero: "images/global-identity-rebrand/hero.jpg",
+    overview: [
+      "Rebranding of Staples' global network, Global Identity. This project included an overhaul of previous branding to be more diverse, human, and inclusive."
+    ],
+    approach: [
+      {"title": "Listen to partners", "text": "Worked with partners across the global network to identify who they want to be, how they want to represent themselves, and how to elevate their current brand experience."},
+      {"title": "Build the identity", "text": "Developed a new logo, color palette, brand voice, and imagery to support the rebrand."},
+      {"title": "Launch the website", "text": "Designed and developed a new website to support their offerings."}
+    ],
+    gallery: [
+      {"src": "images/global-identity-rebrand/01.jpg", "alt": "Global Identity Rebrand, image 1", "caption": "", "wide": true},
+      {"src": "images/global-identity-rebrand/02.jpg", "alt": "Global Identity Rebrand, image 2", "caption": "", "wide": false},
+      {"src": "images/global-identity-rebrand/03.jpg", "alt": "Global Identity Rebrand, image 3", "caption": "", "wide": false}
+    ]
+  },
+
+  {
+    slug: "campaign-marketing",
+    published: true,
+    title: "Campaign & Marketing Work",
+    client: "Airbnb, Republic Services, H&R Block",
+    category: "Marketing",
+    tags: ["Email", "Animation", "Digital Display", "Illustration"],
+    summary: "Email, digital display, and print campaigns that drove awareness and sales for enterprise merchandise programs.",
+    role: "Concept, design, illustration, and animation",
+    cover: "images/campaign-marketing/cover.jpg",
+    hero: "images/campaign-marketing/hero.jpg",
+    overview: [
+      "A collection of campaigns created to launch, promote, and grow merchandise programs for enterprise clients. Each one was shaped by the client’s culture, audience, and what had worked before."
+    ],
+    approach: [
+      {"title": "Airbnb Goods launch", "text": "Two animated emails introduced the Airbnb and Staples partnership, teased the fall collection, then launched the merchandise website."},
+      {"title": "Airbnb custom merchandise intro", "text": "A digital display and printed handout introduced the Staples account reps, with custom illustrations of each rep in the Airbnb brand style."},
+      {"title": "Airbnb custom orders", "text": "Emails with an incentive for a first custom order, one featuring Airbnb employees modeling the merch and one with a San Francisco theme."},
+      {"title": "Year of the Dog", "text": "An offer built around the Woof! dog-friendly collection, researched to avoid unlucky numbers and colors, and run across email, digital display, and Airbnb’s newsletter."},
+      {"title": "Airbnb Pride", "text": "An animated display celebrating Pride Month with the Bélo in rainbow form, shown in both San Francisco offices."},
+      {"title": "Airbnb pop-up shop", "text": "A same-day animated display announcing an on-site pop-up shop to drive spur-of-the-moment visits."},
+      {"title": "Republic Services store launch", "text": "An animated truck teaser email, chosen because past results showed employees responded best to animated GIFs."},
+      {"title": "Republic Services Earth Day", "text": "Email and intranet promotion of eco-friendly merchandise, with the Earth always shown in blue to stand apart from a green-branded competitor."},
+      {"title": "H&R Block Block Box", "text": "A subscription box concept for the Block Shop, presented through packaging design, layout, and creative copy."}
+    ],
+    gallery: [
+      {"src": "images/airbnb-launch-campaign/01.jpg", "alt": "Airbnb Goods launch", "caption": "Airbnb Goods launch", "wide": true},
+      {"src": "images/airbnb-custom-campaign/01.jpg", "alt": "Airbnb custom merchandise intro", "caption": "Airbnb custom merchandise intro", "wide": false},
+      {"src": "images/airbnb-custom-merchandise-campaign/01.jpg", "alt": "Airbnb custom orders", "caption": "Airbnb custom orders", "wide": false},
+      {"src": "images/airbnb-email-marketing/01.jpg", "alt": "Year of the Dog", "caption": "Year of the Dog", "wide": false},
+      {"src": "images/airbnb-pride-display/01.jpg", "alt": "Airbnb Pride", "caption": "Airbnb Pride", "wide": false},
+      {"src": "images/airbnb-pop-up-shop-display/01.jpg", "alt": "Airbnb pop-up shop", "caption": "Airbnb pop-up shop", "wide": false},
+      {"src": "images/republic-services-launch-teaser/01.jpg", "alt": "Republic Services store launch", "caption": "Republic Services store launch", "wide": false},
+      {"src": "images/republic-services-earth-day/01.jpg", "alt": "Republic Services Earth Day", "caption": "Republic Services Earth Day", "wide": false},
+      {"src": "images/hr-block-box/01.jpg", "alt": "H&R Block Block Box", "caption": "H&R Block Block Box", "wide": false}
+    ]
+  },
+
+  {
+    slug: "staples-promo-photo-shoot",
+    legacy: "staples-promo-photoshoot",
+    published: true,
+    title: "Staples Promo Photo Shoot",
+    client: "Staples Promo",
+    category: "Art Direction",
+    tags: ["Art Direction", "Photography"],
+    summary: "Photo direction for Staples Promo brand launch, digital marketing, and e-commerce website.",
+    role: "Photo direction",
+    team: "Brand creative team, modeling agency, wardrobe stylist, hair & makeup stylist, product stylist, and photographer",
+    cover: "images/staples-promo-photo-shoot/cover.jpg",
+    hero: "images/staples-promo-photo-shoot/hero.jpg",
+    overview: [
+      "This photo shoot was planned to support the new brand launch of Staples Promo. The goal was to showcase branded merchandise in a vibrant environment to promote brand awareness.",
+      "The models were booked through a modeling agency and selected based on the extended Staples Promo demographic."
+    ],
+    gallery: [
+      {"src": "images/staples-promo-photo-shoot/01.jpg", "alt": "Staples Promo Photo Shoot, image 1", "caption": "", "wide": true},
+      {"src": "images/staples-promo-photo-shoot/02.jpg", "alt": "Staples Promo Photo Shoot, image 2", "caption": "", "wide": false},
+      {"src": "images/staples-promo-photo-shoot/03.jpg", "alt": "Staples Promo Photo Shoot, image 3", "caption": "", "wide": false}
     ]
   }
 
