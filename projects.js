@@ -126,7 +126,7 @@ var PROJECTS = [
   {
     slug: "fedex-global-ecommerce",
     legacy: "fedex-ecommerce-website-design-development",
-    published: false,
+    published: true,
     title: "Global FedEx eCommerce Website",
     client: "FedEx",
     category: "eCommerce",
@@ -167,7 +167,7 @@ var PROJECTS = [
   {
     slug: "staples-promo-product-pages",
     legacy: "staples-promo-product-page-redesign",
-    published: false,
+    published: true,
     title: "Staples Promo Product Pages UI/UX",
     client: "Staples Promo",
     category: "eCommerce",
@@ -196,7 +196,7 @@ var PROJECTS = [
   {
     slug: "staples-promo-design-system",
     legacy: "staples-promo-digital-design-system",
-    published: false,
+    published: true,
     title: "Staples Promo Design System",
     client: "Staples Promo",
     category: "Strategy & Leadership",
@@ -228,7 +228,7 @@ var PROJECTS = [
   {
     slug: "staples-promo-photo-shoot",
     legacy: "staples-promo-photoshoot",
-    published: false,
+    published: true,
     title: "Staples Promo Photo Shoot",
     client: "Staples Promo",
     category: "Art Direction",
@@ -252,7 +252,7 @@ var PROJECTS = [
   {
     slug: "airbnb-ecommerce-2020",
     legacy: "2020-airbnb-ecommerce",
-    published: false,
+    published: true,
     title: "2020 Airbnb E-Commerce Website",
     client: "Airbnb",
     category: "eCommerce",
@@ -284,7 +284,7 @@ var PROJECTS = [
   {
     slug: "airbnb-digital-display-travel",
     legacy: "airbnb-digital-display-travel",
-    published: false,
+    published: true,
     title: "Airbnb Digital Display",
     client: "Airbnb",
     category: "Marketing",
@@ -306,7 +306,7 @@ var PROJECTS = [
   {
     slug: "hrblock-marketing",
     legacy: "hrblock-marketing",
-    published: false,
+    published: true,
     title: "H&R Block Marketing",
     client: "H&R Block",
     category: "Marketing",
@@ -328,7 +328,7 @@ var PROJECTS = [
   {
     slug: "airbnb-custom-campaign",
     legacy: "airbnb-custom-campaign",
-    published: false,
+    published: true,
     title: "Airbnb Custom Campaign",
     client: "Airbnb",
     category: "Marketing",
@@ -353,7 +353,7 @@ var PROJECTS = [
   {
     slug: "republic-services-launch-teaser",
     legacy: "republic-services-launch-teaser",
-    published: false,
+    published: true,
     title: "Republic Services Launch Teaser",
     client: "Republic Services",
     category: "Marketing",
@@ -377,7 +377,7 @@ var PROJECTS = [
   {
     slug: "airbnb-launch-campaign",
     legacy: "airbnb-launch-campaign",
-    published: false,
+    published: true,
     title: "Airbnb Launch Campaign",
     client: "Airbnb",
     category: "Marketing",
@@ -402,7 +402,7 @@ var PROJECTS = [
   {
     slug: "airbnb-custom-merchandise-campaign",
     legacy: "airbnb-custom-merchandise-campaign",
-    published: false,
+    published: true,
     title: "Airbnb Custom Merchandise Campaign",
     client: "Airbnb",
     category: "Marketing",
@@ -427,7 +427,7 @@ var PROJECTS = [
   {
     slug: "airbnb-pop-up-shop-display",
     legacy: "airbnb-digital-display",
-    published: false,
+    published: true,
     title: "Airbnb Digital Display (Pop-Up Shop)",
     client: "Airbnb",
     category: "Marketing",
@@ -449,7 +449,7 @@ var PROJECTS = [
   {
     slug: "global-identity-rebrand",
     legacy: "copy-of-intuit-marketing",
-    published: false,
+    published: true,
     title: "Global Identity Rebrand",
     client: "Staples",
     category: "Marketing",
@@ -476,7 +476,7 @@ var PROJECTS = [
   {
     slug: "airbnb-email-marketing",
     legacy: "airbnb-email-marketing",
-    published: false,
+    published: true,
     title: "Airbnb Email Marketing",
     client: "Airbnb",
     category: "Marketing",
@@ -504,7 +504,7 @@ var PROJECTS = [
   {
     slug: "mycogen-seeds-photo-shoot",
     legacy: "mycogen-seeds-photoshoot",
-    published: false,
+    published: true,
     title: "Mycogen Seeds Photo Shoot",
     client: "Mycogen Seeds",
     category: "Art Direction",
@@ -528,7 +528,7 @@ var PROJECTS = [
   {
     slug: "airbnb-goods",
     legacy: "airbnb-ecommerce-website",
-    published: false,
+    published: true,
     title: "Airbnb eCommerce Website",
     client: "Airbnb",
     category: "eCommerce",
@@ -565,7 +565,7 @@ var PROJECTS = [
   {
     slug: "hr-block-box",
     legacy: "hr-block-box",
-    published: false,
+    published: true,
     title: "H&R Block Marketing Box",
     client: "H&R Block",
     category: "Marketing",
@@ -589,7 +589,7 @@ var PROJECTS = [
   {
     slug: "republic-services-earth-day",
     legacy: "republic-services-earthday-campaign",
-    published: false,
+    published: true,
     title: "Republic Services Earth Day Campaign",
     client: "Republic Services",
     category: "Marketing",
@@ -614,7 +614,7 @@ var PROJECTS = [
   {
     slug: "intuit-marketing",
     legacy: "intuit-marketing",
-    published: false,
+    published: true,
     title: "Intuit Marketing",
     client: "Intuit",
     category: "Marketing",
@@ -636,7 +636,7 @@ var PROJECTS = [
   {
     slug: "airbnb-pride-display",
     legacy: "airbnb-digital-display-pride",
-    published: false,
+    published: true,
     title: "Airbnb Pride Digital Display",
     client: "Airbnb",
     category: "Marketing",
@@ -658,7 +658,7 @@ var PROJECTS = [
   {
     slug: "gulfstream-ecommerce",
     legacy: "gulfstream-ecommerce-website",
-    published: false,
+    published: true,
     title: "Gulfstream eCommerce Website",
     client: "Gulfstream",
     category: "eCommerce",
