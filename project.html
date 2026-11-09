@@ -29,6 +29,8 @@ h1.pt{color:var(--o);font-family:var(--display);font-weight:400;text-transform:u
 .ach{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px}
 .ach b{display:block;font-family:var(--display);font-weight:400;color:var(--o);font-size:clamp(48px,6vw,88px);line-height:1}
 .ach span{display:block;margin-top:8px;font-size:16px}
+.ach b .sa{display:inline;margin:0 .06em;font-size:.6em}
+.sa{font-family:var(--sans);font-weight:700;font-size:.6em;vertical-align:.14em}
 .steps{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--o)}
 .steps li{display:grid;grid-template-columns:60px 1fr;gap:16px;padding:22px 0;border-bottom:1.5px solid var(--o)}
 .steps .n{font-family:var(--display);color:var(--o);font-size:32px;line-height:1}
@@ -100,7 +102,7 @@ h1.pt{color:var(--o);font-family:var(--display);font-weight:400;text-transform:u
     return '<li><span class="n">' + String(i + 1).padStart(2, '0') + '</span><div><h3>' + esc(s.title) + '</h3><p>' + esc(s.text) + '</p></div></li>';
   }).join('') + '</ol>' : '');
   html += sec('By the numbers', p.achievements && p.achievements.length ? '<div class="ach">' + p.achievements.map(function (a) {
-    return '<div><b>' + esc(a.value) + '</b><span>' + esc(a.label) + '</span></div>';
+    return '<div><b>' + esc(a.value).replace(/[→↗←↑↓]/g, '<span class="sa">$&</span>') + '</b><span>' + esc(a.label) + '</span></div>';
   }).join('') + '</div>' : '');
   html += sec('Highlights', p.highlights && p.highlights.length ? '<ul class="hlist">' + p.highlights.map(function (h) { var k = h.indexOf(': '); return '<li>' + (k > 0 && k < 60 ? '<b>' + esc(h.slice(0, k + 1)) + '</b> ' + esc(h.slice(k + 2)) : esc(h)) + '</li>'; }).join('') + '</ul>' : '');
 
