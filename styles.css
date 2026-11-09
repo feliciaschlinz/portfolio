@@ -61,7 +61,7 @@ h2{color:var(--o);font-family:var(--display);font-weight:400;text-transform:uppe
 
 /* list rows */
 .list{margin-top:60px;border-top:1.5px solid var(--o)}
-.row{display:grid;grid-template-columns:1.4fr 1fr 160px;gap:24px;align-items:baseline;padding:26px 0;border-bottom:1.5px solid var(--o);position:relative;transition:padding .3s,background .3s,color .3s}
+.row{display:grid;grid-template-columns:1.4fr 1fr 160px;gap:24px;align-items:center;padding:26px 0;border-bottom:1.5px solid var(--o);position:relative;transition:padding .3s,background .3s,color .3s}
 a.row:hover{background:var(--o);color:var(--ot);padding-left:20px;padding-right:20px}
 a.row:hover .t{color:var(--bg)}
 .row .t{color:var(--o);font-size:clamp(28px,3.8vw,54px);font-weight:700;letter-spacing:-.03em;line-height:1}
